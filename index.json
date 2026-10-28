@@ -1,5 +1,129 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T00:00:00Z",
-  "extensions": []
+  "generatedAt": "2026-10-28T22:21:03.800Z",
+  "extensions": [
+    {
+      "id": "sextant.example.crd-view",
+      "name": "Widgets",
+      "author": "Sextant",
+      "description": "An example extension of Sextant's SDK for the Widget custom resource of Sextant's test cluster (demo.sextant.dev): a table column, a details section, a Scale action that asks before it changes anything, and a settings section.",
+      "categories": [
+        "developer"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extension-examples",
+      "publisherKey": "RWR5obDzZRl8Wvu7iWwnbNyNOGgs9xfTX3Zx/mWgroIGRWP5RAIqjq7s",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 1,
+        "tag": "crd-view-v1.0.0",
+        "asset": "sextant.example.crd-view-1.0.0.sextant-ext",
+        "size": 6447,
+        "sha256": "c66ace1fc751106f6bc3a010b0acaccd6fc52f49ec2b7cb99810805b41adc456",
+        "keyId": "5A7C1965F3B0A179",
+        "publishedAt": "2026-10-28T19:12:53Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "demo.sextant.dev",
+                    "kind": "Widget"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "demo.sextant.dev",
+                    "kind": "Widget"
+                  }
+                ]
+              },
+              "actions": [
+                "modify"
+              ],
+              "confirm": true
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "actions": 1,
+          "columns": 1
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.example.hello-page",
+      "name": "Hello pods",
+      "author": "Sextant",
+      "description": "An example extension of Sextant's SDK: a page that lists pods live in the namespaces of Sextant's filter, or in one picked on the page, in Sextant's theme. It only reads Pods and Namespaces.",
+      "categories": [
+        "developer",
+        "workloads"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extension-examples",
+      "publisherKey": "RWR5obDzZRl8Wvu7iWwnbNyNOGgs9xfTX3Zx/mWgroIGRWP5RAIqjq7s",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 1,
+        "tag": "hello-page-v1.0.0",
+        "asset": "sextant.example.hello-page-1.0.0.sextant-ext",
+        "size": 6263,
+        "sha256": "d36908831af41a57fa429d138c8c91b1ff39b91f7fe22f672edd53681d55a217",
+        "keyId": "5A7C1965F3B0A179",
+        "publishedAt": "2026-10-28T19:12:47Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Namespace"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "pages": 1
+        },
+        "backend": null
+      }
+    }
+  ]
 }
