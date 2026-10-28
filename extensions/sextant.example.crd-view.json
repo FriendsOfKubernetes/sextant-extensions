@@ -1,0 +1,9 @@
+{
+  "id": "sextant.example.crd-view",
+  "name": "Widgets",
+  "author": "Sextant",
+  "description": "An example extension of Sextant's SDK for the Widget custom resource of Sextant's test cluster (demo.sextant.dev): a table column, a details section, a Scale action that asks before it changes anything, and a settings section.",
+  "categories": ["developer"],
+  "repository": "FriendsOfKubernetes/sextant-extension-examples",
+  "publisherKey": "RWR5obDzZRl8Wvu7iWwnbNyNOGgs9xfTX3Zx/mWgroIGRWP5RAIqjq7s"
+}
