@@ -1,0 +1,9 @@
+{
+  "id": "sextant.example.hello-page",
+  "name": "Hello pods",
+  "author": "Sextant",
+  "description": "An example extension of Sextant's SDK: a page that lists pods live in the namespaces of Sextant's filter, or in one picked on the page, in Sextant's theme. It only reads Pods and Namespaces.",
+  "categories": ["developer", "workloads"],
+  "repository": "FriendsOfKubernetes/sextant-extension-examples",
+  "publisherKey": "RWR5obDzZRl8Wvu7iWwnbNyNOGgs9xfTX3Zx/mWgroIGRWP5RAIqjq7s"
+}
