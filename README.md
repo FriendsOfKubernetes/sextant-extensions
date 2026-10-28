@@ -2,7 +2,7 @@
 
 The catalog of extensions for [Sextant](https://github.com/FriendsOfKubernetes/sextant), the free Kubernetes desktop client. Sextant reads `index.json` from this repository and shows it under Settings → Extensions → Catalog. The design is in [ADR-0130](https://github.com/FriendsOfKubernetes/sextant/blob/main/docs/adr/0130-extensions-from-a-catalog-one-index-at-a-fixed-url-packages-from-the-publishers-github-releases-signed-with-the-key-the-index-pins.md).
 
-> **Status:** being built for Sextant 0.26.0 ([#271](https://github.com/FriendsOfKubernetes/sextant/issues/271)). The index is empty, and entries are not accepted yet.
+> **Status:** being built for Sextant 0.26.0 ([#271](https://github.com/FriendsOfKubernetes/sextant/issues/271)). The index is empty for now. To add an extension, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## How it works
 

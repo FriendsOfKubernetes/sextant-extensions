@@ -1,0 +1,74 @@
+name: Index
+
+# Checks the entries of a pull request, and on main (every change and once a day) rewrites index.json from them.
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths: ["extensions/**", "scripts/**", ".github/workflows/index.yml"]
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: index-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          repository: FriendsOfKubernetes/sextant
+          path: .sextant
+          sparse-checkout: |
+            sdk/scripts
+            crates/sextant-core/src/extensions/manifest.schema.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Check the entries and their releases
+        run: node scripts/build-index.mjs --sdk .sextant/sdk/scripts --check
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+  index:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          repository: FriendsOfKubernetes/sextant
+          path: .sextant
+          sparse-checkout: |
+            sdk/scripts
+            crates/sextant-core/src/extensions/manifest.schema.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Build the index
+        run: node scripts/build-index.mjs --sdk .sextant/sdk/scripts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Commit the index
+        run: |
+          if git diff --quiet -- index.json; then
+            echo "The index did not change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          git commit -m "Update the index"
+          git push
