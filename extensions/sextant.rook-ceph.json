@@ -1,0 +1,9 @@
+{
+  "id": "sextant.rook-ceph",
+  "name": "Rook Ceph",
+  "author": "Sextant",
+  "description": "Rook Ceph clusters at a glance, read-only: Ceph health and its checks in plain words, capacity, versions, the daemons and CSI drivers, pools and filesystems with the storage classes and claims on them, charts from the Ceph mgr's metrics, and problems when Ceph is unhealthy or its status goes stale. In every language Sextant has.",
+  "categories": ["storage", "observability"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}
