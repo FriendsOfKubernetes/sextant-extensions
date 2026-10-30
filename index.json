@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T22:21:03.800Z",
+  "generatedAt": "2026-10-30T21:20:19.121Z",
   "extensions": [
     {
       "id": "sextant.example.crd-view",
@@ -121,6 +121,102 @@
         },
         "contributes": {
           "pages": 1
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.rook-ceph",
+      "name": "Rook Ceph",
+      "author": "Sextant",
+      "description": "Rook Ceph clusters at a glance, read-only: Ceph health and its checks in plain words, capacity, versions, the daemons and CSI drivers, pools and filesystems with the storage classes and claims on them, charts from the Ceph mgr's metrics, and problems when Ceph is unhealthy or its status goes stale. In every language Sextant has.",
+      "categories": [
+        "storage",
+        "observability"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 2,
+        "tag": "rook-ceph-v1.0.0",
+        "asset": "sextant.rook-ceph-1.0.0.sextant-ext",
+        "size": 80032,
+        "sha256": "fcb439336280c8fdd27823b3fcdeb714e445b50e505e1b67b0ef7fcbaf3f40ce",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-10-30T21:17:33Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephCluster"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephBlockPool"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephFilesystem"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephObjectStore"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephObjectStoreUser"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephNFS"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephClient"
+                  },
+                  {
+                    "group": "objectbucket.io",
+                    "kind": "ObjectBucketClaim"
+                  },
+                  {
+                    "group": "objectbucket.io",
+                    "kind": "ObjectBucket"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  },
+                  {
+                    "group": "",
+                    "kind": "PersistentVolumeClaim"
+                  },
+                  {
+                    "group": "storage.k8s.io",
+                    "kind": "StorageClass"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "pages": 1,
+          "detailsSections": 4,
+          "columns": 1
         },
         "backend": null
       }
