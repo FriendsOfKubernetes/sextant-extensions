@@ -2,7 +2,7 @@
   "id": "sextant.rook-ceph",
   "name": "Rook Ceph",
   "author": "Sextant",
-  "description": "Rook Ceph clusters at a glance, read-only: Ceph health and its checks in plain words, capacity, versions, the daemons and CSI drivers, pools and filesystems with the storage classes and claims on them, charts from the Ceph mgr's metrics, and problems when Ceph is unhealthy or its status goes stale. In every language Sextant has.",
+  "description": "Rook Ceph clusters: Ceph health and its checks in plain words, capacity, daemons, the CRUSH tree and OSDs, pools, filesystems and object stores with their storage classes and claims, charts and problems. Since 1.1.0 it also manages them through Rook's own objects (upgrades, OSDs, CRUSH location, settings, create and delete), every change shown first and confirmed. In every language Sextant has.",
   "categories": ["storage", "observability"],
   "repository": "FriendsOfKubernetes/sextant-extensions",
   "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
