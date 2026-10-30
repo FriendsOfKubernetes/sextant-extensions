@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T21:20:19.121Z",
+  "generatedAt": "2026-10-30T23:16:14.811Z",
   "extensions": [
     {
       "id": "sextant.example.crd-view",
@@ -129,7 +129,7 @@
       "id": "sextant.rook-ceph",
       "name": "Rook Ceph",
       "author": "Sextant",
-      "description": "Rook Ceph clusters at a glance, read-only: Ceph health and its checks in plain words, capacity, versions, the daemons and CSI drivers, pools and filesystems with the storage classes and claims on them, charts from the Ceph mgr's metrics, and problems when Ceph is unhealthy or its status goes stale. In every language Sextant has.",
+      "description": "Rook Ceph clusters: Ceph health and its checks in plain words, capacity, daemons, the CRUSH tree and OSDs, pools, filesystems and object stores with their storage classes and claims, charts and problems. Since 1.1.0 it also manages them through Rook's own objects (upgrades, OSDs, CRUSH location, settings, create and delete), every change shown first and confirmed. In every language Sextant has.",
       "categories": [
         "storage",
         "observability"
@@ -137,14 +137,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.0.0",
+        "version": "1.1.0",
         "sextantApi": 2,
-        "tag": "rook-ceph-v1.0.0",
-        "asset": "sextant.rook-ceph-1.0.0.sextant-ext",
-        "size": 80032,
-        "sha256": "fcb439336280c8fdd27823b3fcdeb714e445b50e505e1b67b0ef7fcbaf3f40ce",
+        "tag": "rook-ceph-v1.1.0",
+        "asset": "sextant.rook-ceph-1.1.0.sextant-ext",
+        "size": 145126,
+        "sha256": "167d00a06e52122defa5cbe6fa32f09158d85b6146b6248306a1e21faf3a4e05",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-10-30T21:17:33Z",
+        "publishedAt": "2026-10-30T23:14:56Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -204,18 +204,123 @@
                   {
                     "group": "storage.k8s.io",
                     "kind": "StorageClass"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Node"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
                   }
                 ]
               },
               "actions": [
                 "read"
               ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephCluster"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephBlockPool"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephFilesystem"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephObjectStore"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephObjectStoreUser"
+                  },
+                  {
+                    "group": "storage.k8s.io",
+                    "kind": "StorageClass"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Node"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
+                  }
+                ]
+              },
+              "actions": [
+                "modify"
+              ],
+              "confirm": true
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephBlockPool"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephFilesystem"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephObjectStore"
+                  },
+                  {
+                    "group": "ceph.rook.io",
+                    "kind": "CephObjectStoreUser"
+                  },
+                  {
+                    "group": "storage.k8s.io",
+                    "kind": "StorageClass"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
+                  }
+                ]
+              },
+              "actions": [
+                "delete"
+              ],
+              "confirm": true
             }
           ]
         },
         "contributes": {
           "pages": 1,
-          "detailsSections": 4,
+          "detailsSections": 6,
+          "actions": 6,
           "columns": 1
         },
         "backend": null
