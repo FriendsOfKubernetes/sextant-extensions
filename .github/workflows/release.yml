@@ -1,0 +1,86 @@
+name: Release a Sextant extension
+
+# Builds one of Sextant's own extensions (extensions/<name> in the Sextant repository) at a Sextant commit or tag,
+# signs it with the key of Sextant's extensions and publishes it as a release of this repository, where its catalog
+# entry points.
+on:
+  workflow_dispatch:
+    inputs:
+      extension:
+        description: Which extension (a folder of extensions/ in Sextant)
+        type: choice
+        options: [rook-ceph]
+      sextant_ref:
+        description: Sextant commit or tag to build from
+        default: main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ inputs.extension }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          repository: FriendsOfKubernetes/sextant
+          ref: ${{ inputs.sextant_ref }}
+          path: .sextant
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: .sextant/package-lock.json
+      - name: Install the SDK's build tools
+        working-directory: .sextant
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Build and pack
+        id: pack
+        env:
+          EXTENSION: ${{ inputs.extension }}
+        run: |
+          node .sextant/sdk/scripts/build.mjs ".sextant/extensions/$EXTENSION" --out "build/$EXTENSION"
+          node .sextant/sdk/scripts/pack.mjs "build/$EXTENSION" --out out
+          id=$(node -p 'require("./build/" + process.env.EXTENSION + "/sextant-extension.json").id')
+          version=$(node -p 'require("./build/" + process.env.EXTENSION + "/sextant-extension.json").version')
+          echo "asset=$id-$version.sextant-ext" >> "$GITHUB_OUTPUT"
+          echo "tag=$EXTENSION-v$version" >> "$GITHUB_OUTPUT"
+          echo "commit=$(git -C .sextant rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Refuse a version that is already released
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.pack.outputs.tag }}
+        run: |
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "::error::$TAG is already released; raise the version in the extension's sextant-extension.json"
+            exit 1
+          fi
+      - name: Sign
+        env:
+          SEXTANT_EXTENSIONS_SIGNING_KEY: ${{ secrets.SEXTANT_EXTENSIONS_SIGNING_KEY }}
+          ASSET: ${{ steps.pack.outputs.asset }}
+        run: |
+          if [ -z "$SEXTANT_EXTENSIONS_SIGNING_KEY" ]; then
+            echo "::error::the SEXTANT_EXTENSIONS_SIGNING_KEY secret is not set"
+            exit 1
+          fi
+          node .sextant/sdk/scripts/cli.mjs sign "out/$ASSET" --key-env SEXTANT_EXTENSIONS_SIGNING_KEY
+          node .sextant/sdk/scripts/cli.mjs verify "out/$ASSET" --key keys/sextant-extensions.pub
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ASSET: ${{ steps.pack.outputs.asset }}
+          TAG: ${{ steps.pack.outputs.tag }}
+          COMMIT: ${{ steps.pack.outputs.commit }}
+          EXTENSION: ${{ inputs.extension }}
+        run: |
+          notes="Built from FriendsOfKubernetes/sextant@$COMMIT (extensions/$EXTENSION), signed with the key in keys/sextant-extensions.pub."
+          gh release create "$TAG" "out/$ASSET" "out/$ASSET.minisig" \
+            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "$TAG" --notes "$notes"
