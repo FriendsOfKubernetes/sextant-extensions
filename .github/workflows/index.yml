@@ -30,6 +30,7 @@ jobs:
           sparse-checkout: |
             sdk/scripts
             crates/sextant-core/src/extensions/manifest.schema.json
+            src/resources/inline-secrets.json
           sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v5
         with:
@@ -53,6 +54,7 @@ jobs:
           sparse-checkout: |
             sdk/scripts
             crates/sextant-core/src/extensions/manifest.schema.json
+            src/resources/inline-secrets.json
           sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v5
         with:
