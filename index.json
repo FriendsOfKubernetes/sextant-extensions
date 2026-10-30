@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T23:16:14.811Z",
+  "generatedAt": "2026-10-30T23:47:51.632Z",
   "extensions": [
     {
       "id": "sextant.example.crd-view",
@@ -137,14 +137,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.1.0",
+        "version": "1.1.1",
         "sextantApi": 2,
-        "tag": "rook-ceph-v1.1.0",
-        "asset": "sextant.rook-ceph-1.1.0.sextant-ext",
-        "size": 145126,
-        "sha256": "167d00a06e52122defa5cbe6fa32f09158d85b6146b6248306a1e21faf3a4e05",
+        "tag": "rook-ceph-v1.1.1",
+        "asset": "sextant.rook-ceph-1.1.1.sextant-ext",
+        "size": 145503,
+        "sha256": "d7de956caa92f5e98cd08abc6dfff62c81f6add0a4518aa67832905f520182a2",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-10-30T23:14:56Z",
+        "publishedAt": "2026-10-30T23:47:21Z",
         "permissions": {
           "clusters": {
             "type": "all"
