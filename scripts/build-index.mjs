@@ -68,15 +68,35 @@ for (const file of files) {
   }
 }
 
+/** One release of `entry`, downloaded from the address Sextant itself will use and checked by the SDK's rules. */
+async function checked(entry, picked) {
+  const url = catalog.releaseUrl(entry.repository, picked.tag, picked.asset);
+  const packageBytes = await download(url, catalog.MAX_PACKAGE_BYTES);
+  const signature = (await download(`${url}${catalog.SIGNATURE_SUFFIX}`, MAX_SIGNATURE_BYTES)).toString("utf8");
+  return catalog.checkRelease(entry, picked, packageBytes, signature);
+}
+
 const results = new Map();
 for (const entry of entries) {
   try {
-    const picked = catalog.pickRelease(entry, await releasesOf(entry.repository));
+    const releases = await releasesOf(entry.repository);
+    const picked = catalog.pickRelease(entry, releases);
     if (!picked) continue;
-    const url = catalog.releaseUrl(entry.repository, picked.tag, picked.asset);
-    const packageBytes = await download(url, catalog.MAX_PACKAGE_BYTES);
-    const signature = (await download(`${url}${catalog.SIGNATURE_SUFFIX}`, MAX_SIGNATURE_BYTES)).toString("utf8");
-    results.set(entry.id, { latest: catalog.checkRelease(entry, picked, packageBytes, signature) });
+    const latest = await checked(entry, picked);
+    const result = { latest };
+    // Earlier releases for older Sextants (Sextant's ADR-0149), with an SDK that knows them: each checked like the
+    // latest; one that fails is only reported.
+    if (catalog.pickReleases && catalog.needsEarlier?.(latest)) {
+      result.earlier = [];
+      for (const earlier of catalog.pickReleases(entry, releases).slice(1)) {
+        try {
+          result.earlier.push(await checked(entry, earlier));
+        } catch (err) {
+          annotate("warning", err instanceof catalog.CatalogError ? err.message : `${entry.id} ${earlier.tag}: ${err.message}`);
+        }
+      }
+    }
+    results.set(entry.id, result);
   } catch (err) {
     results.set(entry.id, { error: err instanceof catalog.CatalogError ? err.message : `${entry.id}: ${err.message}` });
   }
@@ -92,7 +112,9 @@ const { index, notes } = catalog.buildIndex({ entries, results, previous });
 for (const note of notes) annotate(checkOnly ? "error" : "warning", note);
 for (const extension of index.extensions) {
   const latest = extension.latest ? `${extension.latest.version} (${extension.latest.asset}, key ${extension.latest.keyId})` : "no release";
-  process.stdout.write(`${extension.id}: ${latest}${extension.withdrawn ? " — withdrawn" : ""}\n`);
+  const earlier = (index.earlier?.[extension.id] ?? []).map((r) => `${r.version} (API ${r.sextantApi})`);
+  const older = earlier.length > 0 ? `; for older Sextants ${earlier.join(", ")}` : "";
+  process.stdout.write(`${extension.id}: ${latest}${older}${extension.withdrawn ? " — withdrawn" : ""}\n`);
 }
 if (checkOnly) {
   process.exitCode = invalid > 0 || notes.length > 0 ? 1 : 0;
