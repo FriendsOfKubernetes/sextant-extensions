@@ -1,0 +1,9 @@
+{
+  "id": "sextant.kuberay",
+  "name": "KubeRay",
+  "author": "Sextant",
+  "description": "KubeRay: Ray clusters with their head, worker groups and pods, Ray jobs with their entrypoint and submitter, and Ray Serve services with their applications; problems of failed clusters and jobs and of services that are not ready. Read-only.",
+  "categories": ["workloads"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

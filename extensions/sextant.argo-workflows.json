@@ -1,0 +1,9 @@
+{
+  "id": "sextant.argo-workflows",
+  "name": "Argo Workflows",
+  "author": "Sextant",
+  "description": "Argo Workflows: workflows with their phase, progress, duration and failed step, the step tree with each pod's logs, cron workflows and templates; suspend, resume, stop and terminate with the patches the argo CLI sends, shown first; problems of recently failed workflows.",
+  "categories": ["workloads", "developer"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

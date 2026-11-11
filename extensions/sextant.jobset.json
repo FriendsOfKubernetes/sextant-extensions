@@ -1,0 +1,9 @@
+{
+  "id": "sextant.jobset",
+  "name": "JobSet",
+  "author": "Sextant",
+  "description": "JobSets with their state, replicated jobs, restarts against the limit, success and failure policies, Jobs and pods; problems of failed JobSets and of restarts near the limit. Read-only.",
+  "categories": ["workloads"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

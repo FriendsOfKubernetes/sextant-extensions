@@ -1,0 +1,9 @@
+{
+  "id": "sextant.flux",
+  "name": "Flux",
+  "author": "Sextant",
+  "description": "Flux CD's objects in a sidebar section of their own: sources, Kustomizations, HelmReleases, image automation and notifications with their readiness, revision and source; what each one applied and which objects use a source; problems of what fails to reconcile; Reconcile, Suspend and Resume.",
+  "categories": ["gitops"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

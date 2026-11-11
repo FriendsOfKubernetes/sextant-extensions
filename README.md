@@ -12,8 +12,9 @@ To add an extension, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Sextant's own extensions
 
-Sextant's own extensions (Rook Ceph, `sextant.rook-ceph`, and later the operator views that move out of Sextant's
-core) keep their source in [`extensions/`](https://github.com/FriendsOfKubernetes/sextant/tree/main/extensions) of
+Sextant's own extensions (Rook Ceph, `sextant.rook-ceph`, and, since Sextant 0.30, the tool views that moved out of
+Sextant's core: Flux, Argo CD, Argo Rollouts and Workflows, cert-manager, Trivy, KEDA, Karpenter and the others, all
+named `sextant.<name>`) keep their source in [`extensions/`](https://github.com/FriendsOfKubernetes/sextant/tree/main/extensions) of
 the Sextant repository and are released here, on their own versions: the **Release a Sextant extension** workflow
 (run by hand) builds one at a Sextant commit, signs it with the key in [`keys/sextant-extensions.pub`](keys/), checks
 the signature and publishes the release `<extension>-v<version>`. Their entries name this repository and that key.

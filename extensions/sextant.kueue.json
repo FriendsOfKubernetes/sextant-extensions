@@ -1,0 +1,9 @@
+{
+  "id": "sextant.kueue",
+  "name": "Kueue",
+  "author": "Sextant",
+  "description": "Kueue's queues and Workloads: ClusterQueues with their quota against what is reserved and in use, LocalQueues, Workloads with why they wait or were evicted, flavors, cohorts, admission checks and priority classes, and the queue of every job Kueue queues; problems of queues that admit nothing and, opt-in, of Workloads waiting too long, not queueable or evicted repeatedly. Read-only.",
+  "categories": ["workloads"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

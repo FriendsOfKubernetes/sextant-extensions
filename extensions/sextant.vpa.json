@@ -1,0 +1,9 @@
+{
+  "id": "sextant.vpa",
+  "name": "Vertical Pod Autoscaler",
+  "author": "Sextant",
+  "description": "VerticalPodAutoscalers with their state, update mode and recommendation against the target's template with what a new pod would get, their checkpoints and components, and the VPAs of every workload; problems of VPAs the recommender cannot use, that match no pod or that fight an HPA. Read-only.",
+  "categories": ["workloads", "cost"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "sextant.crossplane",
+  "name": "Crossplane",
+  "author": "Sextant",
+  "description": "Crossplane's Composite Resource Definitions, Compositions, Providers, Configurations and Functions with their state, the claims and composite resources of the kinds the XRDs define with the first condition that fails, and the chain Claim → composite → composed resources in the details of claims, composite and managed resources. Read-only.",
+  "categories": ["other"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

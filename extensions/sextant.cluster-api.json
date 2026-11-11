@@ -1,0 +1,9 @@
+{
+  "id": "sextant.cluster-api",
+  "name": "Cluster API",
+  "author": "Sextant",
+  "description": "Cluster API's Clusters, ClusterClasses, KubeadmControlPlanes, MachineDeployments, MachineSets, Machines, MachineHealthChecks and ClusterResourceSets, each with its state from its own phase and conditions; the chain from a Cluster to its Machines, provider objects and Nodes, and the workload cluster opened on a click; problems of failed or unavailable Clusters and control planes, Machines failed or stuck provisioning and blocked remediation. Read-only.",
+  "categories": ["other"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

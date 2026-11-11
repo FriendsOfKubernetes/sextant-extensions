@@ -1,0 +1,9 @@
+{
+  "id": "sextant.trivy",
+  "name": "Trivy",
+  "author": "Sextant",
+  "description": "Trivy Operator's reports: image vulnerabilities, configuration audits, exposed secrets, RBAC and infrastructure assessments, compliance reports and SBOMs, with their severity counts and most severe findings, and the image scans of every workload. Read-only.",
+  "categories": ["security"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

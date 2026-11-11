@@ -1,0 +1,9 @@
+{
+  "id": "sextant.k3s",
+  "name": "k3s / RKE2",
+  "author": "Sextant",
+  "description": "k3s and RKE2 clusters: a Distribution page with the nodes, the bundled components and ServiceLB, helm-controller's HelmCharts with their install Job and its logs, HelmChartConfigs, k3s Addons and etcd snapshots, and a k3s / RKE2 block on Nodes; problems of HelmCharts whose install failed or keeps failing and of bundled components not available. Read-only.",
+  "categories": ["other"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}
