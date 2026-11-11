@@ -1,0 +1,9 @@
+{
+  "id": "sextant.prometheus-operator",
+  "name": "Prometheus Operator",
+  "author": "Sextant",
+  "description": "Prometheus Operator's ServiceMonitors, PodMonitors, Probes, PrometheusRules, Prometheuses and Alertmanagers: what a monitor selects right now and whether its ports exist, which Prometheus picks an object up, a rule's groups, and Prometheus and Alertmanager readiness; opt-in problems of monitors that select nothing and of Prometheuses and Alertmanagers not available. Read-only.",
+  "categories": ["observability"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

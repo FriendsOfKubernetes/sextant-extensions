@@ -1,0 +1,9 @@
+{
+  "id": "sextant.velero",
+  "name": "Velero",
+  "author": "Sextant",
+  "description": "Velero: backups, schedules, restores and storage locations with their phase, errors and warnings, and why one failed in plain words; back up a namespace and restore from a backup by creating Velero's own objects, shown first.",
+  "categories": ["storage"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

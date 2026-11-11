@@ -1,0 +1,9 @@
+{
+  "id": "sextant.strimzi",
+  "name": "Strimzi",
+  "author": "Sextant",
+  "description": "Strimzi (Apache Kafka on Kubernetes): Kafkas with their listeners and node pools, topics, users, Kafka Connect, MirrorMaker 2 and connectors with their readiness, the connectors' and tasks' states and stack traces; problems of objects that are not ready and of failed connectors and tasks.",
+  "categories": ["workloads"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

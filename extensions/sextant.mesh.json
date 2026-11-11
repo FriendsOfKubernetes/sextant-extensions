@@ -1,0 +1,9 @@
+{
+  "id": "sextant.mesh",
+  "name": "Service mesh",
+  "author": "Sextant",
+  "description": "Istio and Linkerd: their kinds in sidebar sections of their own with columns and details in plain words, the Request routing page, a Service mesh block on Pods and workloads (membership, mTLS mode, who may call) and Istio configuration problems. Read-only.",
+  "categories": ["networking", "observability"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

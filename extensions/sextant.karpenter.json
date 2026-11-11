@@ -1,0 +1,9 @@
+{
+  "id": "sextant.karpenter",
+  "name": "Karpenter",
+  "author": "Sextant",
+  "description": "Karpenter's NodePools, NodeClaims and node classes: a NodePool's usage against its limits, its disruption settings and the recent disruptions of its NodeClaims, and a NodeClaim's launch, registration and initialization with why Karpenter disrupts it. Read-only.",
+  "categories": ["workloads", "cost"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

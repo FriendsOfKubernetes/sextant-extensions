@@ -1,0 +1,9 @@
+{
+  "id": "sextant.kyverno",
+  "name": "Kyverno",
+  "author": "Sextant",
+  "description": "Kyverno's ClusterPolicies and Policies with their readiness, mode (Enforce or Audit) and rules, the policy reports with their results, a policy's results over its reports with the objects that fail it, and \"Policy results\" in the details of every object; opt-in problems of objects that fail policy rules. Read-only.",
+  "categories": ["security"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

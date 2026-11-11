@@ -1,0 +1,9 @@
+{
+  "id": "sextant.kserve",
+  "name": "KServe",
+  "author": "Sextant",
+  "description": "KServe: InferenceServices with their state, URL, model format, runtime, deployment mode and canary share, what KServe made for them and the serving runtime KServe chooses; ServingRuntimes, ClusterServingRuntimes, InferenceGraphs and TrainedModels; problems of models that failed to load, specs KServe cannot serve and InferenceServices that are not ready. URIs are shown without credentials or a query. Read-only.",
+  "categories": ["workloads"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

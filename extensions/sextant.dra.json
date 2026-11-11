@@ -1,0 +1,9 @@
+{
+  "id": "sextant.dra",
+  "name": "Dynamic Resource Allocation",
+  "author": "Sextant",
+  "description": "Dynamic Resource Allocation (resource.k8s.io): ResourceClaims with their state, requests (CEL shown as text, never evaluated) and allocated devices, claim templates, device classes and ResourceSlices; the Devices page; the devices of Pods and Nodes; problems of Pods waiting for devices. Read-only.",
+  "categories": ["workloads"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

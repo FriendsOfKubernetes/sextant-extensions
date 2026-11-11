@@ -1,0 +1,9 @@
+{
+  "id": "sextant.olm",
+  "name": "Operator Lifecycle Manager",
+  "author": "Sextant",
+  "description": "Operator Lifecycle Manager: Subscriptions with their state and pending upgrades, ClusterServiceVersions with their phase, requirements and Deployments (copies told apart), InstallPlans with their steps, catalogs, OperatorGroups, Operators, and OLM v1's ClusterExtensions and ClusterCatalogs; problems of failed operators, failed or stuck install plans and unhealthy catalogs. Read-only.",
+  "categories": ["other"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "sextant.traefik",
+  "name": "Traefik",
+  "author": "Sextant",
+  "description": "Traefik's IngressRoutes (HTTP, TCP and UDP), Middlewares, TraefikServices, TLS options and stores and ServersTransports, of traefik.io and of traefik.containo.us where still served: routes with their entry points and services, settings, and whether every object a reference names exists, with broken references as problems of an opt-in category. Read-only.",
+  "categories": ["networking"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

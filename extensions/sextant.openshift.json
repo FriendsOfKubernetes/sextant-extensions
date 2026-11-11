@@ -1,0 +1,9 @@
+{
+  "id": "sextant.openshift",
+  "name": "OpenShift",
+  "author": "Sextant",
+  "description": "OpenShift's Routes with their admission and backends, DeploymentConfigs with their rollouts and triggers, BuildConfigs with their builds, Builds with their failure and pod logs, ImageStreams with their tags and Projects, with Rollout latest and Start build; problems of Routes no router admitted, failed rollouts, recent failed Builds and failing imports.",
+  "categories": ["workloads", "networking"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

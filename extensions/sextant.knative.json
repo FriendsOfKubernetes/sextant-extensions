@@ -1,0 +1,9 @@
+{
+  "id": "sextant.knative",
+  "name": "Knative",
+  "author": "Sextant",
+  "description": "Knative Serving and Eventing: Services, Configurations, Revisions, Routes and DomainMappings with their state, URL, revisions and traffic split; Brokers, Triggers, Channels, Subscriptions, Sequences, Parallels and sources with where they send events and the event path; problems of objects that are not ready. Read-only.",
+  "categories": ["workloads", "networking"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

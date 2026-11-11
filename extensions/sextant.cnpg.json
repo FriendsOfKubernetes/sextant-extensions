@@ -1,0 +1,9 @@
+{
+  "id": "sextant.cnpg",
+  "name": "CloudNativePG",
+  "author": "Sextant",
+  "description": "CloudNativePG: PostgreSQL clusters with their state, instances, primary and switchovers, backups and continuous archiving, scheduled backups and poolers; problems of unhealthy clusters, failing archiving or backups and failed backups.",
+  "categories": ["storage", "workloads"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

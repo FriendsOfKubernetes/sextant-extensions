@@ -1,0 +1,9 @@
+{
+  "id": "sextant.contour",
+  "name": "Contour",
+  "author": "Sextant",
+  "description": "Contour's HTTPProxies, TLSCertificateDelegations and ExtensionServices: each proxy's state as Contour writes it with its first error, its virtual host and TLS, routes with each service's share, includes and the delegation tree; problems of invalid and orphaned proxies. Read-only.",
+  "categories": ["networking"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}

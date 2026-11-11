@@ -1,0 +1,9 @@
+{
+  "id": "sextant.argo-rollouts",
+  "name": "Argo Rollouts",
+  "author": "Sextant",
+  "description": "Argo Rollouts: rollouts with their steps, weights, ReplicaSets and analysis runs; promote, abort, retry, pause and resume with the exact patches of kubectl argo rollouts, shown first; problems of degraded and aborted rollouts and failed analyses.",
+  "categories": ["gitops", "workloads"],
+  "repository": "FriendsOfKubernetes/sextant-extensions",
+  "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0"
+}
