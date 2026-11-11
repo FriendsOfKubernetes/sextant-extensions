@@ -31,6 +31,7 @@ jobs:
             sdk/scripts
             crates/sextant-core/src/extensions/manifest.schema.json
             src/resources/inline-secrets.json
+            src/components/Table/field-selectors.json
           sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v5
         with:
@@ -55,6 +56,7 @@ jobs:
             sdk/scripts
             crates/sextant-core/src/extensions/manifest.schema.json
             src/resources/inline-secrets.json
+            src/components/Table/field-selectors.json
           sparse-checkout-cone-mode: false
       - uses: actions/setup-node@v5
         with:
