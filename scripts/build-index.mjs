@@ -48,11 +48,21 @@ async function download(url, limit, headers = {}) {
   return Buffer.concat(chunks);
 }
 
+/** Pages of 100 releases read at most per repository: one repository may hold the releases of many extensions. */
+const MAX_RELEASE_PAGES = 5;
+
 async function releasesOf(repository) {
   const headers = { Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
   if (token) headers.Authorization = `Bearer ${token}`;
-  const body = await download(`https://api.github.com/repos/${repository}/releases?per_page=20`, 4 * 1024 * 1024, headers);
-  return JSON.parse(body.toString("utf8"));
+  const releases = [];
+  for (let page = 1; page <= MAX_RELEASE_PAGES; page++) {
+    const url = `https://api.github.com/repos/${repository}/releases?per_page=100&page=${page}`;
+    const list = JSON.parse((await download(url, 8 * 1024 * 1024, headers)).toString("utf8"));
+    if (!Array.isArray(list)) break;
+    releases.push(...list);
+    if (list.length < 100) break;
+  }
+  return releases;
 }
 
 const entries = [];

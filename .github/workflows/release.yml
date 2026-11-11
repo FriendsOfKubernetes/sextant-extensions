@@ -9,7 +9,7 @@ on:
       extension:
         description: Which extension (a folder of extensions/ in Sextant)
         type: choice
-        options: [rook-ceph]
+        options: [argo-cd, argo-rollouts, argo-workflows, cert-manager, cluster-api, cnpg, contour, crossplane, dra, external-secrets, flux, gpu-operator, jobset, k3s, karpenter, keda, knative, kserve, kuberay, kueue, kyverno, mesh, olm, openshift, prometheus-operator, rook-ceph, sealed-secrets, strimzi, traefik, trivy, velero, vpa]
       sextant_ref:
         description: Sextant commit or tag to build from
         default: main
