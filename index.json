@@ -1,7 +1,2270 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T09:27:48.849Z",
+  "generatedAt": "2026-11-11T10:28:07.073Z",
   "extensions": [
+    {
+      "id": "sextant.argo-cd",
+      "name": "Argo CD",
+      "author": "Sextant",
+      "description": "Argo CD's Applications, ApplicationSets and AppProjects in a section of their own: sync, health, revision and destination, the resources each application manages with their health, the sync history; Sync, Refresh, Terminate, the diff of desired and live states from Argo CD's API, and the Argo CD UI.",
+      "categories": [
+        "gitops"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.4.0",
+        "sextantApi": 4,
+        "tag": "argo-cd-v1.4.0",
+        "asset": "sextant.argo-cd-1.4.0.sextant-ext",
+        "size": 4001458,
+        "sha256": "58d6ab30da352b81bdced81e049a19631bc1eb970cf9ff2400c338ba60f19026",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:05:11Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "argoproj.io",
+                    "kind": "Application"
+                  },
+                  {
+                    "group": "argoproj.io",
+                    "kind": "ApplicationSet"
+                  },
+                  {
+                    "group": "argoproj.io",
+                    "kind": "AppProject"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "StatefulSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "DaemonSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "ReplicaSet"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
+                  },
+                  {
+                    "group": "",
+                    "kind": "PersistentVolumeClaim"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "networking.k8s.io",
+                    "kind": "Ingress"
+                  },
+                  {
+                    "group": "",
+                    "kind": "ConfigMap"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "argoproj.io",
+                    "kind": "Application"
+                  }
+                ]
+              },
+              "actions": [
+                "modify"
+              ],
+              "confirm": false
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  }
+                ]
+              },
+              "actions": [
+                "portForward"
+              ],
+              "confirm": false
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 3,
+          "actions": 6,
+          "columns": 9
+        },
+        "backend": {
+          "hosts": [],
+          "credentials": []
+        }
+      }
+    },
+    {
+      "id": "sextant.argo-rollouts",
+      "name": "Argo Rollouts",
+      "author": "Sextant",
+      "description": "Argo Rollouts: rollouts with their steps, weights, ReplicaSets and analysis runs; promote, abort, retry, pause and resume with the exact patches of kubectl argo rollouts, shown first; problems of degraded and aborted rollouts and failed analyses.",
+      "categories": [
+        "gitops",
+        "workloads"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.4.0",
+        "sextantApi": 4,
+        "tag": "argo-rollouts-v1.4.0",
+        "asset": "sextant.argo-rollouts-1.4.0.sextant-ext",
+        "size": 49875,
+        "sha256": "743912892cafa8daa97a84c91c3858eb4b48541d2fdc55ec25d10e495f2d0146",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:05:02Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "statusPatches": [
+            {
+              "group": "argoproj.io",
+              "kind": "Rollout"
+            }
+          ],
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "argoproj.io",
+                    "kind": "Rollout"
+                  },
+                  {
+                    "group": "argoproj.io",
+                    "kind": "AnalysisRun"
+                  },
+                  {
+                    "group": "argoproj.io",
+                    "kind": "AnalysisTemplate"
+                  },
+                  {
+                    "group": "argoproj.io",
+                    "kind": "ClusterAnalysisTemplate"
+                  },
+                  {
+                    "group": "argoproj.io",
+                    "kind": "Experiment"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "ReplicaSet"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "argoproj.io",
+                    "kind": "Rollout"
+                  }
+                ]
+              },
+              "actions": [
+                "modify"
+              ],
+              "confirm": false
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 4,
+          "actions": 6,
+          "columns": 13
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.argo-workflows",
+      "name": "Argo Workflows",
+      "author": "Sextant",
+      "description": "Argo Workflows: workflows with their phase, progress, duration and failed step, the step tree with each pod's logs, cron workflows and templates; suspend, resume, stop and terminate with the patches the argo CLI sends, shown first; problems of recently failed workflows.",
+      "categories": [
+        "workloads",
+        "developer"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.1.0",
+        "sextantApi": 4,
+        "tag": "argo-workflows-v1.1.0",
+        "asset": "sextant.argo-workflows-1.1.0.sextant-ext",
+        "size": 44380,
+        "sha256": "31d0af4502084745b8f9805c035bc724ac4fadcb145fc42b6cee28c700fdec09",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:05:08Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "argoproj.io",
+                    "kind": "Workflow"
+                  },
+                  {
+                    "group": "argoproj.io",
+                    "kind": "CronWorkflow"
+                  },
+                  {
+                    "group": "argoproj.io",
+                    "kind": "WorkflowTemplate"
+                  },
+                  {
+                    "group": "argoproj.io",
+                    "kind": "ClusterWorkflowTemplate"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "argoproj.io",
+                    "kind": "Workflow"
+                  }
+                ]
+              },
+              "actions": [
+                "modify"
+              ],
+              "confirm": false
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "logs"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 3,
+          "actions": 4,
+          "columns": 12
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.cert-manager",
+      "name": "cert-manager",
+      "author": "Sextant",
+      "description": "cert-manager's Certificates, CertificateRequests, Issuers, ClusterIssuers, Orders and Challenges with their state and reasons, the issuance chain Certificate → CertificateRequest → Order → Challenge, and plain-language explanations of the common failures; problems of Certificates that are not ready, fail to renew, expire soon or have expired. Read-only.",
+      "categories": [
+        "security"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "cert-manager-v1.0.0",
+        "asset": "sextant.cert-manager-1.0.0.sextant-ext",
+        "size": 48466,
+        "sha256": "78f0900c30151115436ffbbd24f152f0fce8a2391f480d8ed7ae34d833195b76",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:05:11Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "cert-manager.io",
+                    "kind": "Certificate"
+                  },
+                  {
+                    "group": "cert-manager.io",
+                    "kind": "CertificateRequest"
+                  },
+                  {
+                    "group": "cert-manager.io",
+                    "kind": "Issuer"
+                  },
+                  {
+                    "group": "cert-manager.io",
+                    "kind": "ClusterIssuer"
+                  },
+                  {
+                    "group": "acme.cert-manager.io",
+                    "kind": "Order"
+                  },
+                  {
+                    "group": "acme.cert-manager.io",
+                    "kind": "Challenge"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 2,
+          "columns": 26
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.cluster-api",
+      "name": "Cluster API",
+      "author": "Sextant",
+      "description": "Cluster API's Clusters, ClusterClasses, KubeadmControlPlanes, MachineDeployments, MachineSets, Machines, MachineHealthChecks and ClusterResourceSets, each with its state from its own phase and conditions; the chain from a Cluster to its Machines, provider objects and Nodes, and the workload cluster opened on a click; problems of failed or unavailable Clusters and control planes, Machines failed or stuck provisioning and blocked remediation. Read-only.",
+      "categories": [
+        "other"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "cluster-api-v1.0.0",
+        "asset": "sextant.cluster-api-1.0.0.sextant-ext",
+        "size": 56827,
+        "sha256": "d2b60dce8a5ef9546d8237e4ec3b3606dd273bb081ee9df06d49c427eef9c219",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:05:49Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "readGroups": [
+            "*.cluster.x-k8s.io"
+          ],
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "Cluster"
+                  },
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "ClusterClass"
+                  },
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "MachineDeployment"
+                  },
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "MachineSet"
+                  },
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "Machine"
+                  },
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "MachineHealthCheck"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "columns": 34
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.cnpg",
+      "name": "CloudNativePG",
+      "author": "Sextant",
+      "description": "CloudNativePG: PostgreSQL clusters with their state, instances, primary and switchovers, backups and continuous archiving, scheduled backups and poolers; problems of unhealthy clusters, failing archiving or backups and failed backups.",
+      "categories": [
+        "storage",
+        "workloads"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "cnpg-v1.0.0",
+        "asset": "sextant.cnpg-1.0.0.sextant-ext",
+        "size": 34238,
+        "sha256": "8026f9a54ad9d5c37b8783d6b7db13afa958e8c53648bbd292c828cef9bcc441",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:05:49Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "postgresql.cnpg.io",
+                    "kind": "Cluster"
+                  },
+                  {
+                    "group": "postgresql.cnpg.io",
+                    "kind": "Backup"
+                  },
+                  {
+                    "group": "postgresql.cnpg.io",
+                    "kind": "ScheduledBackup"
+                  },
+                  {
+                    "group": "postgresql.cnpg.io",
+                    "kind": "Pooler"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "columns": 16
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.contour",
+      "name": "Contour",
+      "author": "Sextant",
+      "description": "Contour's HTTPProxies, TLSCertificateDelegations and ExtensionServices: each proxy's state as Contour writes it with its first error, its virtual host and TLS, routes with each service's share, includes and the delegation tree; problems of invalid and orphaned proxies. Read-only.",
+      "categories": [
+        "networking"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "contour-v1.0.0",
+        "asset": "sextant.contour-1.0.0.sextant-ext",
+        "size": 46015,
+        "sha256": "dcdfaa503a5ca8fd462364bd8963ddd68f0ff3677a15b22c4ed6ee7f3d294893",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:06:00Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "projectcontour.io",
+                    "kind": "HTTPProxy"
+                  },
+                  {
+                    "group": "projectcontour.io",
+                    "kind": "TLSCertificateDelegation"
+                  },
+                  {
+                    "group": "projectcontour.io",
+                    "kind": "ExtensionService"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 3,
+          "columns": 12
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.crossplane",
+      "name": "Crossplane",
+      "author": "Sextant",
+      "description": "Crossplane's Composite Resource Definitions, Compositions, Providers, Configurations and Functions with their state, the claims and composite resources of the kinds the XRDs define with the first condition that fails, and the chain Claim → composite → composed resources in the details of claims, composite and managed resources. Read-only.",
+      "categories": [
+        "other"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "crossplane-v1.0.0",
+        "asset": "sextant.crossplane-1.0.0.sextant-ext",
+        "size": 39743,
+        "sha256": "881f2ff5df4d35dc8c1c160e2882956987579f74d92c2aa4660d37cffd225cde",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:05:58Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "all"
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "pages": 1,
+          "detailsSections": 2,
+          "columns": 18
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.dra",
+      "name": "Dynamic Resource Allocation",
+      "author": "Sextant",
+      "description": "Dynamic Resource Allocation (resource.k8s.io): ResourceClaims with their state, requests (CEL shown as text, never evaluated) and allocated devices, claim templates, device classes and ResourceSlices; the Devices page; the devices of Pods and Nodes; problems of Pods waiting for devices. Read-only.",
+      "categories": [
+        "workloads"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "dra-v1.0.0",
+        "asset": "sextant.dra-1.0.0.sextant-ext",
+        "size": 50966,
+        "sha256": "adfc090ef0d3fb1b2b27a9cd6444929d0217d761f092778f30d01b09998060ff",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:06:41Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "resource.k8s.io",
+                    "kind": "ResourceClaim"
+                  },
+                  {
+                    "group": "resource.k8s.io",
+                    "kind": "ResourceClaimTemplate"
+                  },
+                  {
+                    "group": "resource.k8s.io",
+                    "kind": "DeviceClass"
+                  },
+                  {
+                    "group": "resource.k8s.io",
+                    "kind": "ResourceSlice"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "pages": 1,
+          "detailsSections": 6,
+          "columns": 14
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.external-secrets",
+      "name": "External Secrets",
+      "author": "Sextant",
+      "description": "External Secrets Operator: ExternalSecrets, ClusterExternalSecrets, SecretStores, ClusterSecretStores and PushSecrets with their Ready state, the store and its validation, the target Secret, refresh and last sync, and the remote keys by name; problems of failed syncs and invalid stores. It never reads a Secret.",
+      "categories": [
+        "security"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "external-secrets-v1.0.0",
+        "asset": "sextant.external-secrets-1.0.0.sextant-ext",
+        "size": 28578,
+        "sha256": "6f8787d8319459b3ab0f9abf05849528871bfc44862a7303ceae4fd432ae33aa",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:06:47Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "external-secrets.io",
+                    "kind": "ExternalSecret"
+                  },
+                  {
+                    "group": "external-secrets.io",
+                    "kind": "ClusterExternalSecret"
+                  },
+                  {
+                    "group": "external-secrets.io",
+                    "kind": "SecretStore"
+                  },
+                  {
+                    "group": "external-secrets.io",
+                    "kind": "ClusterSecretStore"
+                  },
+                  {
+                    "group": "external-secrets.io",
+                    "kind": "PushSecret"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "columns": 23
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.flux",
+      "name": "Flux",
+      "author": "Sextant",
+      "description": "Flux CD's objects in a sidebar section of their own: sources, Kustomizations, HelmReleases, image automation and notifications with their readiness, revision and source; what each one applied and which objects use a source; problems of what fails to reconcile; Reconcile, Suspend and Resume.",
+      "categories": [
+        "gitops"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.4.0",
+        "sextantApi": 4,
+        "tag": "flux-v1.4.0",
+        "asset": "sextant.flux-1.4.0.sextant-ext",
+        "size": 3978897,
+        "sha256": "d23c40d83f236be86648980746259dcbba30942497b8cdcc3220aa8b56f06538",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:06:51Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "source.toolkit.fluxcd.io",
+                    "kind": "GitRepository"
+                  },
+                  {
+                    "group": "source.toolkit.fluxcd.io",
+                    "kind": "OCIRepository"
+                  },
+                  {
+                    "group": "source.toolkit.fluxcd.io",
+                    "kind": "HelmRepository"
+                  },
+                  {
+                    "group": "source.toolkit.fluxcd.io",
+                    "kind": "HelmChart"
+                  },
+                  {
+                    "group": "source.toolkit.fluxcd.io",
+                    "kind": "Bucket"
+                  },
+                  {
+                    "group": "kustomize.toolkit.fluxcd.io",
+                    "kind": "Kustomization"
+                  },
+                  {
+                    "group": "helm.toolkit.fluxcd.io",
+                    "kind": "HelmRelease"
+                  },
+                  {
+                    "group": "image.toolkit.fluxcd.io",
+                    "kind": "ImageRepository"
+                  },
+                  {
+                    "group": "image.toolkit.fluxcd.io",
+                    "kind": "ImagePolicy"
+                  },
+                  {
+                    "group": "image.toolkit.fluxcd.io",
+                    "kind": "ImageUpdateAutomation"
+                  },
+                  {
+                    "group": "notification.toolkit.fluxcd.io",
+                    "kind": "Alert"
+                  },
+                  {
+                    "group": "notification.toolkit.fluxcd.io",
+                    "kind": "Provider"
+                  },
+                  {
+                    "group": "notification.toolkit.fluxcd.io",
+                    "kind": "Receiver"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "StatefulSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "DaemonSet"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "CronJob"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "",
+                    "kind": "ConfigMap"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Secret"
+                  },
+                  {
+                    "group": "",
+                    "kind": "ServiceAccount"
+                  },
+                  {
+                    "group": "",
+                    "kind": "PersistentVolumeClaim"
+                  },
+                  {
+                    "group": "networking.k8s.io",
+                    "kind": "Ingress"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "source.toolkit.fluxcd.io",
+                    "kind": "GitRepository"
+                  },
+                  {
+                    "group": "source.toolkit.fluxcd.io",
+                    "kind": "OCIRepository"
+                  },
+                  {
+                    "group": "source.toolkit.fluxcd.io",
+                    "kind": "HelmRepository"
+                  },
+                  {
+                    "group": "source.toolkit.fluxcd.io",
+                    "kind": "HelmChart"
+                  },
+                  {
+                    "group": "source.toolkit.fluxcd.io",
+                    "kind": "Bucket"
+                  },
+                  {
+                    "group": "kustomize.toolkit.fluxcd.io",
+                    "kind": "Kustomization"
+                  },
+                  {
+                    "group": "helm.toolkit.fluxcd.io",
+                    "kind": "HelmRelease"
+                  },
+                  {
+                    "group": "image.toolkit.fluxcd.io",
+                    "kind": "ImageRepository"
+                  },
+                  {
+                    "group": "image.toolkit.fluxcd.io",
+                    "kind": "ImagePolicy"
+                  },
+                  {
+                    "group": "image.toolkit.fluxcd.io",
+                    "kind": "ImageUpdateAutomation"
+                  },
+                  {
+                    "group": "notification.toolkit.fluxcd.io",
+                    "kind": "Alert"
+                  },
+                  {
+                    "group": "notification.toolkit.fluxcd.io",
+                    "kind": "Provider"
+                  },
+                  {
+                    "group": "notification.toolkit.fluxcd.io",
+                    "kind": "Receiver"
+                  }
+                ]
+              },
+              "actions": [
+                "modify"
+              ],
+              "confirm": false
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 4,
+          "actions": 4,
+          "columns": 54
+        },
+        "backend": {
+          "hosts": [],
+          "credentials": []
+        }
+      }
+    },
+    {
+      "id": "sextant.gpu-operator",
+      "name": "NVIDIA GPU Operator",
+      "author": "Sextant",
+      "description": "NVIDIA GPU Operator's ClusterPolicies and NVIDIADrivers with their state, components and DaemonSets and the MIG strategy, a GPU block on GPU nodes and a GPU nodes page; problems of objects not ready, components not rolled out and failed MIG configurations. Read-only.",
+      "categories": [
+        "workloads"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "gpu-operator-v1.0.0",
+        "asset": "sextant.gpu-operator-1.0.0.sextant-ext",
+        "size": 42358,
+        "sha256": "a457e83d1dd9fc03ecd626617225502eec065ad3feae40930295bd59276cf4d4",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:06:45Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "nvidia.com",
+                    "kind": "ClusterPolicy"
+                  },
+                  {
+                    "group": "nvidia.com",
+                    "kind": "NVIDIADriver"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "DaemonSet"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Node"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "pages": 1,
+          "detailsSections": 2,
+          "columns": 7
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.jobset",
+      "name": "JobSet",
+      "author": "Sextant",
+      "description": "JobSets with their state, replicated jobs, restarts against the limit, success and failure policies, Jobs and pods; problems of failed JobSets and of restarts near the limit. Read-only.",
+      "categories": [
+        "workloads"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "jobset-v1.0.0",
+        "asset": "sextant.jobset-1.0.0.sextant-ext",
+        "size": 33496,
+        "sha256": "6eb1ca32572e9ce326af096c7b70527b8eb9b5b58b0ee6ff8c63afef1be9670a",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:07:30Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "jobset.x-k8s.io",
+                    "kind": "JobSet"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "columns": 5
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.k3s",
+      "name": "k3s / RKE2",
+      "author": "Sextant",
+      "description": "k3s and RKE2 clusters: a Distribution page with the nodes, the bundled components and ServiceLB, helm-controller's HelmCharts with their install Job and its logs, HelmChartConfigs, k3s Addons and etcd snapshots, and a k3s / RKE2 block on Nodes; problems of HelmCharts whose install failed or keeps failing and of bundled components not available. Read-only.",
+      "categories": [
+        "other"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "k3s-v1.0.0",
+        "asset": "sextant.k3s-1.0.0.sextant-ext",
+        "size": 92177,
+        "sha256": "4b150d3531cc1e1f04c74347cd5811d150f9124c00ee6dc07ce18dbaec738962",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:07:32Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "helm.cattle.io",
+                    "kind": "HelmChart"
+                  },
+                  {
+                    "group": "helm.cattle.io",
+                    "kind": "HelmChartConfig"
+                  },
+                  {
+                    "group": "k3s.cattle.io",
+                    "kind": "Addon"
+                  },
+                  {
+                    "group": "k3s.cattle.io",
+                    "kind": "ETCDSnapshotFile"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Node"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "only",
+                "namespaces": [
+                  "kube-system"
+                ]
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "DaemonSet"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "logs"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "pages": 1,
+          "detailsSections": 2,
+          "columns": 13
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.karpenter",
+      "name": "Karpenter",
+      "author": "Sextant",
+      "description": "Karpenter's NodePools, NodeClaims and node classes: a NodePool's usage against its limits, its disruption settings and the recent disruptions of its NodeClaims, and a NodeClaim's launch, registration and initialization with why Karpenter disrupts it. Read-only.",
+      "categories": [
+        "workloads",
+        "cost"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "karpenter-v1.0.0",
+        "asset": "sextant.karpenter-1.0.0.sextant-ext",
+        "size": 36819,
+        "sha256": "7c17f50fda331dd7efdbe721946737700f305b243aabeed4c2ae3a6092ddcde5",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:07:38Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "karpenter.sh",
+                    "kind": "NodePool"
+                  },
+                  {
+                    "group": "karpenter.sh",
+                    "kind": "NodeClaim"
+                  },
+                  {
+                    "group": "karpenter.k8s.aws",
+                    "kind": "EC2NodeClass"
+                  },
+                  {
+                    "group": "karpenter.azure.com",
+                    "kind": "AKSNodeClass"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Event"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 2,
+          "columns": 16
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.keda",
+      "name": "KEDA",
+      "author": "Sextant",
+      "description": "KEDA's ScaledObjects, ScaledJobs and TriggerAuthentications: the target, replica range, triggers and state in plain words, the HPA KEDA manages with its verdict and metrics, and where the trigger parameters come from (names only). Read-only.",
+      "categories": [
+        "workloads"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "keda-v1.0.0",
+        "asset": "sextant.keda-1.0.0.sextant-ext",
+        "size": 47948,
+        "sha256": "fc16636db16dd3c805beb0b66cd04798337e2840a88e591b57a17b0a5e70e7b3",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:07:38Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "keda.sh",
+                    "kind": "ScaledObject"
+                  },
+                  {
+                    "group": "keda.sh",
+                    "kind": "ScaledJob"
+                  },
+                  {
+                    "group": "keda.sh",
+                    "kind": "TriggerAuthentication"
+                  },
+                  {
+                    "group": "keda.sh",
+                    "kind": "ClusterTriggerAuthentication"
+                  },
+                  {
+                    "group": "autoscaling",
+                    "kind": "HorizontalPodAutoscaler"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 3,
+          "columns": 12
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.knative",
+      "name": "Knative",
+      "author": "Sextant",
+      "description": "Knative Serving and Eventing: Services, Configurations, Revisions, Routes and DomainMappings with their state, URL, revisions and traffic split; Brokers, Triggers, Channels, Subscriptions, Sequences, Parallels and sources with where they send events and the event path; problems of objects that are not ready. Read-only.",
+      "categories": [
+        "workloads",
+        "networking"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "knative-v1.0.0",
+        "asset": "sextant.knative-1.0.0.sextant-ext",
+        "size": 68979,
+        "sha256": "69228ba823c8e142f97556bd59e2fed4eaa89c46a417de5913e491777fe76e10",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:08:21Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "Configuration"
+                  },
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "Revision"
+                  },
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "Route"
+                  },
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "DomainMapping"
+                  },
+                  {
+                    "group": "eventing.knative.dev",
+                    "kind": "Broker"
+                  },
+                  {
+                    "group": "eventing.knative.dev",
+                    "kind": "Trigger"
+                  },
+                  {
+                    "group": "messaging.knative.dev",
+                    "kind": "Channel"
+                  },
+                  {
+                    "group": "messaging.knative.dev",
+                    "kind": "InMemoryChannel"
+                  },
+                  {
+                    "group": "messaging.knative.dev",
+                    "kind": "Subscription"
+                  },
+                  {
+                    "group": "flows.knative.dev",
+                    "kind": "Sequence"
+                  },
+                  {
+                    "group": "flows.knative.dev",
+                    "kind": "Parallel"
+                  },
+                  {
+                    "group": "sources.knative.dev",
+                    "kind": "ApiServerSource"
+                  },
+                  {
+                    "group": "sources.knative.dev",
+                    "kind": "PingSource"
+                  },
+                  {
+                    "group": "sources.knative.dev",
+                    "kind": "ContainerSource"
+                  },
+                  {
+                    "group": "sources.knative.dev",
+                    "kind": "SinkBinding"
+                  },
+                  {
+                    "group": "sources.knative.dev",
+                    "kind": "KafkaSource"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 17,
+          "columns": 68
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.kserve",
+      "name": "KServe",
+      "author": "Sextant",
+      "description": "KServe: InferenceServices with their state, URL, model format, runtime, deployment mode and canary share, what KServe made for them and the serving runtime KServe chooses; ServingRuntimes, ClusterServingRuntimes, InferenceGraphs and TrainedModels; problems of models that failed to load, specs KServe cannot serve and InferenceServices that are not ready. URIs are shown without credentials or a query. Read-only.",
+      "categories": [
+        "workloads"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "kserve-v1.0.0",
+        "asset": "sextant.kserve-1.0.0.sextant-ext",
+        "size": 45667,
+        "sha256": "f3221d0df9076bc617a1c4dc0e0790600198637e9a129352e3f1a1562fe050e3",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:08:24Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "serving.kserve.io",
+                    "kind": "InferenceService"
+                  },
+                  {
+                    "group": "serving.kserve.io",
+                    "kind": "ServingRuntime"
+                  },
+                  {
+                    "group": "serving.kserve.io",
+                    "kind": "ClusterServingRuntime"
+                  },
+                  {
+                    "group": "serving.kserve.io",
+                    "kind": "InferenceGraph"
+                  },
+                  {
+                    "group": "serving.kserve.io",
+                    "kind": "TrainedModel"
+                  },
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 5,
+          "columns": 20
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.kuberay",
+      "name": "KubeRay",
+      "author": "Sextant",
+      "description": "KubeRay: Ray clusters with their head, worker groups and pods, Ray jobs with their entrypoint and submitter, and Ray Serve services with their applications; problems of failed clusters and jobs and of services that are not ready. Read-only.",
+      "categories": [
+        "workloads"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "kuberay-v1.0.0",
+        "asset": "sextant.kuberay-1.0.0.sextant-ext",
+        "size": 73963,
+        "sha256": "8c13076cbc949ed67c70417ce1003c0815e95a58e100e994b2af193157dc02bd",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:08:23Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "ray.io",
+                    "kind": "RayCluster"
+                  },
+                  {
+                    "group": "ray.io",
+                    "kind": "RayJob"
+                  },
+                  {
+                    "group": "ray.io",
+                    "kind": "RayService"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "logs"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 3,
+          "columns": 13
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.kueue",
+      "name": "Kueue",
+      "author": "Sextant",
+      "description": "Kueue's queues and Workloads: ClusterQueues with their quota against what is reserved and in use, LocalQueues, Workloads with why they wait or were evicted, flavors, cohorts, admission checks and priority classes, and the queue of every job Kueue queues; problems of queues that admit nothing and, opt-in, of Workloads waiting too long, not queueable or evicted repeatedly. Read-only.",
+      "categories": [
+        "workloads"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "kueue-v1.0.0",
+        "asset": "sextant.kueue-1.0.0.sextant-ext",
+        "size": 50016,
+        "sha256": "701fd99d4b9064437d3430207ac60fbc3e05409c27ef88e280710ba03a710c39",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:08:32Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "kueue.x-k8s.io",
+                    "kind": "ClusterQueue"
+                  },
+                  {
+                    "group": "kueue.x-k8s.io",
+                    "kind": "LocalQueue"
+                  },
+                  {
+                    "group": "kueue.x-k8s.io",
+                    "kind": "Workload"
+                  },
+                  {
+                    "group": "kueue.x-k8s.io",
+                    "kind": "ResourceFlavor"
+                  },
+                  {
+                    "group": "kueue.x-k8s.io",
+                    "kind": "Cohort"
+                  },
+                  {
+                    "group": "kueue.x-k8s.io",
+                    "kind": "AdmissionCheck"
+                  },
+                  {
+                    "group": "kueue.x-k8s.io",
+                    "kind": "WorkloadPriorityClass"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
+                  },
+                  {
+                    "group": "jobset.x-k8s.io",
+                    "kind": "JobSet"
+                  },
+                  {
+                    "group": "ray.io",
+                    "kind": "RayJob"
+                  },
+                  {
+                    "group": "ray.io",
+                    "kind": "RayCluster"
+                  },
+                  {
+                    "group": "kubeflow.org",
+                    "kind": "PyTorchJob"
+                  },
+                  {
+                    "group": "kubeflow.org",
+                    "kind": "TFJob"
+                  },
+                  {
+                    "group": "kubeflow.org",
+                    "kind": "XGBoostJob"
+                  },
+                  {
+                    "group": "kubeflow.org",
+                    "kind": "PaddleJob"
+                  },
+                  {
+                    "group": "kubeflow.org",
+                    "kind": "JAXJob"
+                  },
+                  {
+                    "group": "kubeflow.org",
+                    "kind": "MPIJob"
+                  },
+                  {
+                    "group": "trainer.kubeflow.org",
+                    "kind": "TrainJob"
+                  },
+                  {
+                    "group": "leaderworkerset.x-k8s.io",
+                    "kind": "LeaderWorkerSet"
+                  },
+                  {
+                    "group": "workload.codeflare.dev",
+                    "kind": "AppWrapper"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 2,
+          "columns": 24
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.kyverno",
+      "name": "Kyverno",
+      "author": "Sextant",
+      "description": "Kyverno's ClusterPolicies and Policies with their readiness, mode (Enforce or Audit) and rules, the policy reports with their results, a policy's results over its reports with the objects that fail it, and \"Policy results\" in the details of every object; opt-in problems of objects that fail policy rules. Read-only.",
+      "categories": [
+        "security"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "kyverno-v1.0.0",
+        "asset": "sextant.kyverno-1.0.0.sextant-ext",
+        "size": 41875,
+        "sha256": "38d89ab7e9c34f7b0e09e3180f135d09c95ef34615346f79c19a795f552ef1d5",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:09:14Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "kyverno.io",
+                    "kind": "ClusterPolicy"
+                  },
+                  {
+                    "group": "kyverno.io",
+                    "kind": "Policy"
+                  },
+                  {
+                    "group": "wgpolicyk8s.io",
+                    "kind": "PolicyReport"
+                  },
+                  {
+                    "group": "wgpolicyk8s.io",
+                    "kind": "ClusterPolicyReport"
+                  },
+                  {
+                    "group": "reports.kyverno.io",
+                    "kind": "EphemeralReport"
+                  },
+                  {
+                    "group": "reports.kyverno.io",
+                    "kind": "ClusterEphemeralReport"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 7,
+          "columns": 34
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.mesh",
+      "name": "Service mesh",
+      "author": "Sextant",
+      "description": "Istio and Linkerd: their kinds in sidebar sections of their own with columns and details in plain words, the Request routing page, a Service mesh block on Pods and workloads (membership, mTLS mode, who may call) and Istio configuration problems. Read-only.",
+      "categories": [
+        "networking",
+        "observability"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "mesh-v1.0.0",
+        "asset": "sextant.mesh-1.0.0.sextant-ext",
+        "size": 4129953,
+        "sha256": "7cb8378dcfe52d6785c86f69ea5e369edf72cc1a7cc0b6f48c76df3c72758ac8",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:09:16Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "networking.istio.io",
+                    "kind": "VirtualService"
+                  },
+                  {
+                    "group": "networking.istio.io",
+                    "kind": "DestinationRule"
+                  },
+                  {
+                    "group": "networking.istio.io",
+                    "kind": "Gateway"
+                  },
+                  {
+                    "group": "networking.istio.io",
+                    "kind": "ServiceEntry"
+                  },
+                  {
+                    "group": "networking.istio.io",
+                    "kind": "Sidecar"
+                  },
+                  {
+                    "group": "networking.istio.io",
+                    "kind": "WorkloadEntry"
+                  },
+                  {
+                    "group": "security.istio.io",
+                    "kind": "PeerAuthentication"
+                  },
+                  {
+                    "group": "security.istio.io",
+                    "kind": "RequestAuthentication"
+                  },
+                  {
+                    "group": "security.istio.io",
+                    "kind": "AuthorizationPolicy"
+                  },
+                  {
+                    "group": "telemetry.istio.io",
+                    "kind": "Telemetry"
+                  },
+                  {
+                    "group": "linkerd.io",
+                    "kind": "ServiceProfile"
+                  },
+                  {
+                    "group": "policy.linkerd.io",
+                    "kind": "Server"
+                  },
+                  {
+                    "group": "policy.linkerd.io",
+                    "kind": "HTTPRoute"
+                  },
+                  {
+                    "group": "policy.linkerd.io",
+                    "kind": "AuthorizationPolicy"
+                  },
+                  {
+                    "group": "policy.linkerd.io",
+                    "kind": "ServerAuthorization"
+                  },
+                  {
+                    "group": "policy.linkerd.io",
+                    "kind": "MeshTLSAuthentication"
+                  },
+                  {
+                    "group": "policy.linkerd.io",
+                    "kind": "NetworkAuthentication"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Namespace"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "StatefulSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "DaemonSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "ReplicaSet"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "pages": 1,
+          "detailsSections": 2,
+          "columns": 34
+        },
+        "backend": {
+          "hosts": [],
+          "credentials": []
+        }
+      }
+    },
+    {
+      "id": "sextant.olm",
+      "name": "Operator Lifecycle Manager",
+      "author": "Sextant",
+      "description": "Operator Lifecycle Manager: Subscriptions with their state and pending upgrades, ClusterServiceVersions with their phase, requirements and Deployments (copies told apart), InstallPlans with their steps, catalogs, OperatorGroups, Operators, and OLM v1's ClusterExtensions and ClusterCatalogs; problems of failed operators, failed or stuck install plans and unhealthy catalogs. Read-only.",
+      "categories": [
+        "other"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "olm-v1.0.0",
+        "asset": "sextant.olm-1.0.0.sextant-ext",
+        "size": 52613,
+        "sha256": "4ae33b7db730ea1bb968cb328f8d3b4b7e71ccc2c32cab915820f6955f83c949",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:09:14Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "operators.coreos.com",
+                    "kind": "Subscription"
+                  },
+                  {
+                    "group": "operators.coreos.com",
+                    "kind": "ClusterServiceVersion"
+                  },
+                  {
+                    "group": "operators.coreos.com",
+                    "kind": "InstallPlan"
+                  },
+                  {
+                    "group": "operators.coreos.com",
+                    "kind": "CatalogSource"
+                  },
+                  {
+                    "group": "operators.coreos.com",
+                    "kind": "OperatorGroup"
+                  },
+                  {
+                    "group": "operators.coreos.com",
+                    "kind": "Operator"
+                  },
+                  {
+                    "group": "olm.operatorframework.io",
+                    "kind": "ClusterExtension"
+                  },
+                  {
+                    "group": "olm.operatorframework.io",
+                    "kind": "ClusterCatalog"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 8,
+          "columns": 28
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.openshift",
+      "name": "OpenShift",
+      "author": "Sextant",
+      "description": "OpenShift's Routes with their admission and backends, DeploymentConfigs with their rollouts and triggers, BuildConfigs with their builds, Builds with their failure and pod logs, ImageStreams with their tags and Projects, with Rollout latest and Start build; problems of Routes no router admitted, failed rollouts, recent failed Builds and failing imports.",
+      "categories": [
+        "workloads",
+        "networking"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "openshift-v1.0.0",
+        "asset": "sextant.openshift-1.0.0.sextant-ext",
+        "size": 56828,
+        "sha256": "c7bf8b37907b73b2acec0f75091b9b0ea739addcfe233d25fc3a4acdd9a6afa8",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:09:15Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "route.openshift.io",
+                    "kind": "Route"
+                  },
+                  {
+                    "group": "apps.openshift.io",
+                    "kind": "DeploymentConfig"
+                  },
+                  {
+                    "group": "build.openshift.io",
+                    "kind": "BuildConfig"
+                  },
+                  {
+                    "group": "build.openshift.io",
+                    "kind": "Build"
+                  },
+                  {
+                    "group": "image.openshift.io",
+                    "kind": "ImageStream"
+                  },
+                  {
+                    "group": "project.openshift.io",
+                    "kind": "Project"
+                  },
+                  {
+                    "group": "",
+                    "kind": "ReplicationController"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "apps.openshift.io",
+                    "kind": "DeploymentConfig"
+                  },
+                  {
+                    "group": "build.openshift.io",
+                    "kind": "BuildConfig"
+                  }
+                ]
+              },
+              "actions": [
+                "modify"
+              ],
+              "confirm": false
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "logs"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "actions": 2,
+          "columns": 24
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.prometheus-operator",
+      "name": "Prometheus Operator",
+      "author": "Sextant",
+      "description": "Prometheus Operator's ServiceMonitors, PodMonitors, Probes, PrometheusRules, Prometheuses and Alertmanagers: what a monitor selects right now and whether its ports exist, which Prometheus picks an object up, a rule's groups, and Prometheus and Alertmanager readiness; opt-in problems of monitors that select nothing and of Prometheuses and Alertmanagers not available. Read-only.",
+      "categories": [
+        "observability"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "prometheus-operator-v1.0.0",
+        "asset": "sextant.prometheus-operator-1.0.0.sextant-ext",
+        "size": 36131,
+        "sha256": "051d2949f2205f260b74eebf7d2025893bac10130324a42ae2f3c240eef82342",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:10:06Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "ServiceMonitor"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "PodMonitor"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "Probe"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "PrometheusRule"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "Prometheus"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "Alertmanager"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "PrometheusAgent"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Namespace"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "columns": 19
+        },
+        "backend": null
+      }
+    },
     {
       "id": "sextant.rook-ceph",
       "name": "Rook Ceph",
@@ -207,6 +2470,562 @@
           "detailsSections": 7,
           "actions": 6,
           "columns": 1
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.sealed-secrets",
+      "name": "Sealed Secrets",
+      "author": "Sextant",
+      "description": "Bitnami Sealed Secrets: SealedSecrets with the controller's Synced state and its error in plain words, the scope they were sealed for, the target Secret and how it stands (from its metadata only), the sealed keys by name and size, and the controller with its sealing keys (metadata only; the certificate is never read); opt-in problems of failed unseals. Read-only, and never a value, sealed or decrypted.",
+      "categories": [
+        "security"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "sealed-secrets-v1.0.0",
+        "asset": "sextant.sealed-secrets-1.0.0.sextant-ext",
+        "size": 37886,
+        "sha256": "40163c4fe7d4850af7ca437ed55aaca2885f5ed09fc2daec168b81225914169d",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:10:03Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "bitnami.com",
+                    "kind": "SealedSecret"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Secret"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "columns": 4
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.strimzi",
+      "name": "Strimzi",
+      "author": "Sextant",
+      "description": "Strimzi (Apache Kafka on Kubernetes): Kafkas with their listeners and node pools, topics, users, Kafka Connect, MirrorMaker 2 and connectors with their readiness, the connectors' and tasks' states and stack traces; problems of objects that are not ready and of failed connectors and tasks.",
+      "categories": [
+        "workloads"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "strimzi-v1.0.0",
+        "asset": "sextant.strimzi-1.0.0.sextant-ext",
+        "size": 36701,
+        "sha256": "ffe1aa24a46fad82a5e7d86c0da8a5549ea6efa4fc85f997835326e0e912e7f3",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:10:11Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "Kafka"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaNodePool"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaTopic"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaUser"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaConnect"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaMirrorMaker2"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaConnector"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "columns": 29
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.traefik",
+      "name": "Traefik",
+      "author": "Sextant",
+      "description": "Traefik's IngressRoutes (HTTP, TCP and UDP), Middlewares, TraefikServices, TLS options and stores and ServersTransports, of traefik.io and of traefik.containo.us where still served: routes with their entry points and services, settings, and whether every object a reference names exists, with broken references as problems of an opt-in category. Read-only.",
+      "categories": [
+        "networking"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "traefik-v1.0.0",
+        "asset": "sextant.traefik-1.0.0.sextant-ext",
+        "size": 55580,
+        "sha256": "d9b51f34fc4440552eed3cdcd48aa12e3425c851ec0f4cf69284884a064c8f32",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:10:10Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "traefik.io",
+                    "kind": "IngressRoute"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "IngressRouteTCP"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "IngressRouteUDP"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "Middleware"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "MiddlewareTCP"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "TraefikService"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "TLSOption"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "TLSStore"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "ServersTransport"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "ServersTransportTCP"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "IngressRoute"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "IngressRouteTCP"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "IngressRouteUDP"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "Middleware"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "MiddlewareTCP"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "TraefikService"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "TLSOption"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "TLSStore"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "ServersTransport"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Secret"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 2,
+          "columns": 45
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.trivy",
+      "name": "Trivy",
+      "author": "Sextant",
+      "description": "Trivy Operator's reports: image vulnerabilities, configuration audits, exposed secrets, RBAC and infrastructure assessments, compliance reports and SBOMs, with their severity counts and most severe findings, and the image scans of every workload. Read-only.",
+      "categories": [
+        "security"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "trivy-v1.0.0",
+        "asset": "sextant.trivy-1.0.0.sextant-ext",
+        "size": 32084,
+        "sha256": "71828ab09564c5d07edcc22041182d9c7db627c267c74b7e5e382141478ca5a0",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:10:54Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "VulnerabilityReport"
+                  },
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "ClusterVulnerabilityReport"
+                  },
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "ConfigAuditReport"
+                  },
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "ClusterConfigAuditReport"
+                  },
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "ExposedSecretReport"
+                  },
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "RbacAssessmentReport"
+                  },
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "ClusterRbacAssessmentReport"
+                  },
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "InfraAssessmentReport"
+                  },
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "ClusterInfraAssessmentReport"
+                  },
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "ClusterComplianceReport"
+                  },
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "SbomReport"
+                  },
+                  {
+                    "group": "aquasecurity.github.io",
+                    "kind": "ClusterSbomReport"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "StatefulSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "DaemonSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "ReplicaSet"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "CronJob"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 2,
+          "columns": 62
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.velero",
+      "name": "Velero",
+      "author": "Sextant",
+      "description": "Velero: backups, schedules, restores and storage locations with their phase, errors and warnings, and why one failed in plain words; back up a namespace and restore from a backup by creating Velero's own objects, shown first.",
+      "categories": [
+        "storage"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "velero-v1.0.0",
+        "asset": "sextant.velero-1.0.0.sextant-ext",
+        "size": 37582,
+        "sha256": "febcac6b93069cdb64e73172d03764c8405ec7b32437a57747d1184f17c707e5",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:10:55Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "velero.io",
+                    "kind": "Backup"
+                  },
+                  {
+                    "group": "velero.io",
+                    "kind": "Schedule"
+                  },
+                  {
+                    "group": "velero.io",
+                    "kind": "Restore"
+                  },
+                  {
+                    "group": "velero.io",
+                    "kind": "BackupStorageLocation"
+                  },
+                  {
+                    "group": "velero.io",
+                    "kind": "VolumeSnapshotLocation"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "velero.io",
+                    "kind": "Backup"
+                  },
+                  {
+                    "group": "velero.io",
+                    "kind": "Restore"
+                  }
+                ]
+              },
+              "actions": [
+                "modify"
+              ],
+              "confirm": false
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "actions": 2,
+          "columns": 21
+        },
+        "backend": null
+      }
+    },
+    {
+      "id": "sextant.vpa",
+      "name": "Vertical Pod Autoscaler",
+      "author": "Sextant",
+      "description": "VerticalPodAutoscalers with their state, update mode and recommendation against the target's template with what a new pod would get, their checkpoints and components, and the VPAs of every workload; problems of VPAs the recommender cannot use, that match no pod or that fight an HPA. Read-only.",
+      "categories": [
+        "workloads",
+        "cost"
+      ],
+      "repository": "FriendsOfKubernetes/sextant-extensions",
+      "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
+      "latest": {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "vpa-v1.0.0",
+        "asset": "sextant.vpa-1.0.0.sextant-ext",
+        "size": 60235,
+        "sha256": "efb8ea69ba099bb6699b7d7257a67bfe227778a5099f0abe09e9d4f8070b92ad",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:10:58Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "autoscaling.k8s.io",
+                    "kind": "VerticalPodAutoscaler"
+                  },
+                  {
+                    "group": "autoscaling.k8s.io",
+                    "kind": "VerticalPodAutoscalerCheckpoint"
+                  },
+                  {
+                    "group": "autoscaling",
+                    "kind": "HorizontalPodAutoscaler"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "StatefulSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "DaemonSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "ReplicaSet"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "CronJob"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 2,
+          "columns": 9
         },
         "backend": null
       }
