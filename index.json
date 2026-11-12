@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T09:09:47.450Z",
+  "generatedAt": "2026-11-12T15:18:47.979Z",
   "extensions": [
     {
       "id": "sextant.argo-cd",
@@ -152,14 +152,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.4.0",
+        "version": "1.5.0",
         "sextantApi": 4,
-        "tag": "argo-rollouts-v1.4.0",
-        "asset": "sextant.argo-rollouts-1.4.0.sextant-ext",
-        "size": 49875,
-        "sha256": "743912892cafa8daa97a84c91c3858eb4b48541d2fdc55ec25d10e495f2d0146",
+        "tag": "argo-rollouts-v1.5.0",
+        "asset": "sextant.argo-rollouts-1.5.0.sextant-ext",
+        "size": 4129370,
+        "sha256": "25730dcbd67cc71bc8bac07e4509c34ddc751de93603edda7a9481a5a9d98a56",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-11T10:05:02Z",
+        "publishedAt": "2026-11-12T15:17:38Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -201,6 +201,26 @@
                   {
                     "group": "apps",
                     "kind": "ReplicaSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Event"
+                  },
+                  {
+                    "group": "networking.istio.io",
+                    "kind": "VirtualService"
+                  },
+                  {
+                    "group": "networking.istio.io",
+                    "kind": "DestinationRule"
                   }
                 ]
               },
@@ -229,11 +249,14 @@
           ]
         },
         "contributes": {
-          "detailsSections": 4,
+          "detailsSections": 5,
           "actions": 6,
           "columns": 13
         },
-        "backend": null
+        "backend": {
+          "hosts": [],
+          "credentials": []
+        }
       }
     },
     {
