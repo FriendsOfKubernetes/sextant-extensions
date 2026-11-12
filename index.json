@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T10:28:07.073Z",
+  "generatedAt": "2026-11-12T09:09:47.450Z",
   "extensions": [
     {
       "id": "sextant.argo-cd",
@@ -1121,14 +1121,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.0.0",
-        "sextantApi": 4,
-        "tag": "k3s-v1.0.0",
-        "asset": "sextant.k3s-1.0.0.sextant-ext",
-        "size": 92177,
-        "sha256": "4b150d3531cc1e1f04c74347cd5811d150f9124c00ee6dc07ce18dbaec738962",
+        "version": "1.1.0",
+        "sextantApi": 5,
+        "tag": "k3s-v1.1.0",
+        "asset": "sextant.k3s-1.1.0.sextant-ext",
+        "size": 89897,
+        "sha256": "ab0a92c8bc519c4fc585b0c2fda94e9ccb39e606a71ffa45c060eead8d8ce954",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-11T10:07:32Z",
+        "publishedAt": "2026-11-12T09:08:37Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -1216,6 +1216,20 @@
                 "logs"
               ]
             }
+          ],
+          "maskedSecrets": [
+            {
+              "group": "",
+              "kind": "Node"
+            },
+            {
+              "group": "helm.cattle.io",
+              "kind": "HelmChart"
+            },
+            {
+              "group": "helm.cattle.io",
+              "kind": "HelmChartConfig"
+            }
           ]
         },
         "contributes": {
@@ -1238,14 +1252,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.0.0",
-        "sextantApi": 4,
-        "tag": "karpenter-v1.0.0",
-        "asset": "sextant.karpenter-1.0.0.sextant-ext",
-        "size": 36819,
-        "sha256": "7c17f50fda331dd7efdbe721946737700f305b243aabeed4c2ae3a6092ddcde5",
+        "version": "1.1.0",
+        "sextantApi": 5,
+        "tag": "karpenter-v1.1.0",
+        "asset": "sextant.karpenter-1.1.0.sextant-ext",
+        "size": 36504,
+        "sha256": "0368483753058ed638fc20335fe60b50e1259b5a3b896f289b7645a3eae260fd",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-11T10:07:38Z",
+        "publishedAt": "2026-11-12T09:08:31Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -2190,14 +2204,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.0.0",
-        "sextantApi": 4,
-        "tag": "prometheus-operator-v1.0.0",
-        "asset": "sextant.prometheus-operator-1.0.0.sextant-ext",
-        "size": 36131,
-        "sha256": "051d2949f2205f260b74eebf7d2025893bac10130324a42ae2f3c240eef82342",
+        "version": "1.1.0",
+        "sextantApi": 5,
+        "tag": "prometheus-operator-v1.1.0",
+        "asset": "sextant.prometheus-operator-1.1.0.sextant-ext",
+        "size": 37055,
+        "sha256": "c5f3f62e41305479c945628ec5c8b653be955b88717add34ea9e944925e5f88d",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-11T10:10:06Z",
+        "publishedAt": "2026-11-12T09:08:33Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -2617,14 +2631,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.0.0",
-        "sextantApi": 4,
-        "tag": "traefik-v1.0.0",
-        "asset": "sextant.traefik-1.0.0.sextant-ext",
-        "size": 55580,
-        "sha256": "d9b51f34fc4440552eed3cdcd48aa12e3425c851ec0f4cf69284884a064c8f32",
+        "version": "1.1.0",
+        "sextantApi": 5,
+        "tag": "traefik-v1.1.0",
+        "asset": "sextant.traefik-1.1.0.sextant-ext",
+        "size": 61568,
+        "sha256": "6274b2448a808ff9de8ff7551835114aff3fea3eb3a9638041460ae8a3d2f90c",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-11T10:10:10Z",
+        "publishedAt": "2026-11-12T09:08:32Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -2731,7 +2745,7 @@
         },
         "contributes": {
           "detailsSections": 2,
-          "columns": 45
+          "columns": 62
         },
         "backend": null
       }
@@ -3032,6 +3046,247 @@
     }
   ],
   "earlier": {
+    "sextant.k3s": [
+      {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "k3s-v1.0.0",
+        "asset": "sextant.k3s-1.0.0.sextant-ext",
+        "size": 92177,
+        "sha256": "4b150d3531cc1e1f04c74347cd5811d150f9124c00ee6dc07ce18dbaec738962",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:07:32Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "helm.cattle.io",
+                    "kind": "HelmChart"
+                  },
+                  {
+                    "group": "helm.cattle.io",
+                    "kind": "HelmChartConfig"
+                  },
+                  {
+                    "group": "k3s.cattle.io",
+                    "kind": "Addon"
+                  },
+                  {
+                    "group": "k3s.cattle.io",
+                    "kind": "ETCDSnapshotFile"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Node"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "only",
+                "namespaces": [
+                  "kube-system"
+                ]
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "DaemonSet"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "logs"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "pages": 1,
+          "detailsSections": 2,
+          "columns": 13
+        },
+        "backend": null
+      }
+    ],
+    "sextant.karpenter": [
+      {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "karpenter-v1.0.0",
+        "asset": "sextant.karpenter-1.0.0.sextant-ext",
+        "size": 36819,
+        "sha256": "7c17f50fda331dd7efdbe721946737700f305b243aabeed4c2ae3a6092ddcde5",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:07:38Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "karpenter.sh",
+                    "kind": "NodePool"
+                  },
+                  {
+                    "group": "karpenter.sh",
+                    "kind": "NodeClaim"
+                  },
+                  {
+                    "group": "karpenter.k8s.aws",
+                    "kind": "EC2NodeClass"
+                  },
+                  {
+                    "group": "karpenter.azure.com",
+                    "kind": "AKSNodeClass"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Event"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 2,
+          "columns": 16
+        },
+        "backend": null
+      }
+    ],
+    "sextant.prometheus-operator": [
+      {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "prometheus-operator-v1.0.0",
+        "asset": "sextant.prometheus-operator-1.0.0.sextant-ext",
+        "size": 36131,
+        "sha256": "051d2949f2205f260b74eebf7d2025893bac10130324a42ae2f3c240eef82342",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:10:06Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "ServiceMonitor"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "PodMonitor"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "Probe"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "PrometheusRule"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "Prometheus"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "Alertmanager"
+                  },
+                  {
+                    "group": "monitoring.coreos.com",
+                    "kind": "PrometheusAgent"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Namespace"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "columns": 19
+        },
+        "backend": null
+      }
+    ],
     "sextant.rook-ceph": [
       {
         "version": "1.1.1",
@@ -3219,6 +3474,127 @@
           "detailsSections": 6,
           "actions": 6,
           "columns": 1
+        },
+        "backend": null
+      }
+    ],
+    "sextant.traefik": [
+      {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "traefik-v1.0.0",
+        "asset": "sextant.traefik-1.0.0.sextant-ext",
+        "size": 55580,
+        "sha256": "d9b51f34fc4440552eed3cdcd48aa12e3425c851ec0f4cf69284884a064c8f32",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:10:10Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "traefik.io",
+                    "kind": "IngressRoute"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "IngressRouteTCP"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "IngressRouteUDP"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "Middleware"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "MiddlewareTCP"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "TraefikService"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "TLSOption"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "TLSStore"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "ServersTransport"
+                  },
+                  {
+                    "group": "traefik.io",
+                    "kind": "ServersTransportTCP"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "IngressRoute"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "IngressRouteTCP"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "IngressRouteUDP"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "Middleware"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "MiddlewareTCP"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "TraefikService"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "TLSOption"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "TLSStore"
+                  },
+                  {
+                    "group": "traefik.containo.us",
+                    "kind": "ServersTransport"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Secret"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 2,
+          "columns": 45
         },
         "backend": null
       }
