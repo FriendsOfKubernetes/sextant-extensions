@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T01:37:23.183Z",
+  "generatedAt": "2026-11-19T17:17:54.249Z",
   "extensions": [
     {
       "id": "sextant.argo-cd",
@@ -439,14 +439,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.0.0",
-        "sextantApi": 4,
-        "tag": "cluster-api-v1.0.0",
-        "asset": "sextant.cluster-api-1.0.0.sextant-ext",
-        "size": 56827,
-        "sha256": "d2b60dce8a5ef9546d8237e4ec3b3606dd273bb081ee9df06d49c427eef9c219",
+        "version": "1.1.0",
+        "sextantApi": 6,
+        "tag": "cluster-api-v1.1.0",
+        "asset": "sextant.cluster-api-1.1.0.sextant-ext",
+        "size": 56402,
+        "sha256": "6a33862f9e12e995d51308fae182b7e352522f089c3d14d47e64469601009e03",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-11T10:05:49Z",
+        "publishedAt": "2026-11-19T17:15:54Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -745,14 +745,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.0.0",
-        "sextantApi": 4,
-        "tag": "external-secrets-v1.0.0",
-        "asset": "sextant.external-secrets-1.0.0.sextant-ext",
-        "size": 28578,
-        "sha256": "6f8787d8319459b3ab0f9abf05849528871bfc44862a7303ceae4fd432ae33aa",
+        "version": "1.1.0",
+        "sextantApi": 6,
+        "tag": "external-secrets-v1.1.0",
+        "asset": "sextant.external-secrets-1.1.0.sextant-ext",
+        "size": 28592,
+        "sha256": "e512c3910ad549291574531bd781e1c1b1810e318fe5a6f8b08722c76a31601d",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-11T10:06:47Z",
+        "publishedAt": "2026-11-19T17:15:51Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -1408,14 +1408,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.1.0",
-        "sextantApi": 4,
-        "tag": "knative-v1.1.0",
-        "asset": "sextant.knative-1.1.0.sextant-ext",
-        "size": 68991,
-        "sha256": "a1fb32fa420002387e00ebc4fddea7822a04fc53c70f81b8dec8469662c9f0cc",
+        "version": "1.2.0",
+        "sextantApi": 6,
+        "tag": "knative-v1.2.0",
+        "asset": "sextant.knative-1.2.0.sextant-ext",
+        "size": 3991953,
+        "sha256": "442fad53bea81a9734b3e49e171d934c38b2709cc8823aeb918fb2a8e6e4391e",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-12T23:55:50Z",
+        "publishedAt": "2026-11-19T17:15:57Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -1508,7 +1508,10 @@
           "detailsSections": 17,
           "columns": 68
         },
-        "backend": null
+        "backend": {
+          "hosts": [],
+          "credentials": []
+        }
       }
     },
     {
@@ -1522,14 +1525,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.0.0",
-        "sextantApi": 4,
-        "tag": "kserve-v1.0.0",
-        "asset": "sextant.kserve-1.0.0.sextant-ext",
-        "size": 45667,
-        "sha256": "f3221d0df9076bc617a1c4dc0e0790600198637e9a129352e3f1a1562fe050e3",
+        "version": "1.1.0",
+        "sextantApi": 6,
+        "tag": "kserve-v1.1.0",
+        "asset": "sextant.kserve-1.1.0.sextant-ext",
+        "size": 45699,
+        "sha256": "66614e52c30a1ee25cf12f7a27421451f7a2f658dbdc919d88c72e14e746d273",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-11T10:08:24Z",
+        "publishedAt": "2026-11-19T17:15:50Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -1600,14 +1603,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.0.0",
-        "sextantApi": 4,
-        "tag": "kuberay-v1.0.0",
-        "asset": "sextant.kuberay-1.0.0.sextant-ext",
-        "size": 73963,
-        "sha256": "8c13076cbc949ed67c70417ce1003c0815e95a58e100e994b2af193157dc02bd",
+        "version": "1.1.0",
+        "sextantApi": 6,
+        "tag": "kuberay-v1.1.0",
+        "asset": "sextant.kuberay-1.1.0.sextant-ext",
+        "size": 73840,
+        "sha256": "aa68286a4682323847dc0475bbd1c13873d581e54d696465d588736887314b9c",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-11T10:08:23Z",
+        "publishedAt": "2026-11-19T17:15:36Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -2580,14 +2583,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.0.0",
-        "sextantApi": 4,
-        "tag": "strimzi-v1.0.0",
-        "asset": "sextant.strimzi-1.0.0.sextant-ext",
-        "size": 36701,
-        "sha256": "ffe1aa24a46fad82a5e7d86c0da8a5549ea6efa4fc85f997835326e0e912e7f3",
+        "version": "1.1.0",
+        "sextantApi": 6,
+        "tag": "strimzi-v1.1.0",
+        "asset": "sextant.strimzi-1.1.0.sextant-ext",
+        "size": 36497,
+        "sha256": "4c06674f2850f83b614f695882eeebb6b665bbe5b65c3a389f446cb258ff6a29",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-11T10:10:11Z",
+        "publishedAt": "2026-11-19T17:15:46Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -2996,14 +2999,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.0.0",
-        "sextantApi": 4,
-        "tag": "vpa-v1.0.0",
-        "asset": "sextant.vpa-1.0.0.sextant-ext",
-        "size": 60235,
-        "sha256": "efb8ea69ba099bb6699b7d7257a67bfe227778a5099f0abe09e9d4f8070b92ad",
+        "version": "1.1.0",
+        "sextantApi": 6,
+        "tag": "vpa-v1.1.0",
+        "asset": "sextant.vpa-1.1.0.sextant-ext",
+        "size": 60247,
+        "sha256": "e443914562dac519a082ba39953dda2add3741f553b359552cb0f1c227be33e7",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-11T10:10:58Z",
+        "publishedAt": "2026-11-19T17:16:01Z",
         "permissions": {
           "clusters": {
             "type": "all"
@@ -3069,6 +3072,127 @@
     }
   ],
   "earlier": {
+    "sextant.cluster-api": [
+      {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "cluster-api-v1.0.0",
+        "asset": "sextant.cluster-api-1.0.0.sextant-ext",
+        "size": 56827,
+        "sha256": "d2b60dce8a5ef9546d8237e4ec3b3606dd273bb081ee9df06d49c427eef9c219",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:05:49Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "readGroups": [
+            "*.cluster.x-k8s.io"
+          ],
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "Cluster"
+                  },
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "ClusterClass"
+                  },
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "MachineDeployment"
+                  },
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "MachineSet"
+                  },
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "Machine"
+                  },
+                  {
+                    "group": "cluster.x-k8s.io",
+                    "kind": "MachineHealthCheck"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "columns": 34
+        },
+        "backend": null
+      }
+    ],
+    "sextant.external-secrets": [
+      {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "external-secrets-v1.0.0",
+        "asset": "sextant.external-secrets-1.0.0.sextant-ext",
+        "size": 28578,
+        "sha256": "6f8787d8319459b3ab0f9abf05849528871bfc44862a7303ceae4fd432ae33aa",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:06:47Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "external-secrets.io",
+                    "kind": "ExternalSecret"
+                  },
+                  {
+                    "group": "external-secrets.io",
+                    "kind": "ClusterExternalSecret"
+                  },
+                  {
+                    "group": "external-secrets.io",
+                    "kind": "SecretStore"
+                  },
+                  {
+                    "group": "external-secrets.io",
+                    "kind": "ClusterSecretStore"
+                  },
+                  {
+                    "group": "external-secrets.io",
+                    "kind": "PushSecret"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "columns": 23
+        },
+        "backend": null
+      }
+    ],
     "sextant.k3s": [
       {
         "version": "1.0.0",
@@ -3229,6 +3353,250 @@
         "contributes": {
           "detailsSections": 2,
           "columns": 16
+        },
+        "backend": null
+      }
+    ],
+    "sextant.knative": [
+      {
+        "version": "1.1.0",
+        "sextantApi": 4,
+        "tag": "knative-v1.1.0",
+        "asset": "sextant.knative-1.1.0.sextant-ext",
+        "size": 68991,
+        "sha256": "a1fb32fa420002387e00ebc4fddea7822a04fc53c70f81b8dec8469662c9f0cc",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-12T23:55:50Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "Configuration"
+                  },
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "Revision"
+                  },
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "Route"
+                  },
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "DomainMapping"
+                  },
+                  {
+                    "group": "eventing.knative.dev",
+                    "kind": "Broker"
+                  },
+                  {
+                    "group": "eventing.knative.dev",
+                    "kind": "Trigger"
+                  },
+                  {
+                    "group": "messaging.knative.dev",
+                    "kind": "Channel"
+                  },
+                  {
+                    "group": "messaging.knative.dev",
+                    "kind": "InMemoryChannel"
+                  },
+                  {
+                    "group": "messaging.knative.dev",
+                    "kind": "Subscription"
+                  },
+                  {
+                    "group": "flows.knative.dev",
+                    "kind": "Sequence"
+                  },
+                  {
+                    "group": "flows.knative.dev",
+                    "kind": "Parallel"
+                  },
+                  {
+                    "group": "sources.knative.dev",
+                    "kind": "ApiServerSource"
+                  },
+                  {
+                    "group": "sources.knative.dev",
+                    "kind": "PingSource"
+                  },
+                  {
+                    "group": "sources.knative.dev",
+                    "kind": "ContainerSource"
+                  },
+                  {
+                    "group": "sources.knative.dev",
+                    "kind": "SinkBinding"
+                  },
+                  {
+                    "group": "sources.knative.dev",
+                    "kind": "KafkaSource"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 17,
+          "columns": 68
+        },
+        "backend": null
+      }
+    ],
+    "sextant.kserve": [
+      {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "kserve-v1.0.0",
+        "asset": "sextant.kserve-1.0.0.sextant-ext",
+        "size": 45667,
+        "sha256": "f3221d0df9076bc617a1c4dc0e0790600198637e9a129352e3f1a1562fe050e3",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:08:24Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "serving.kserve.io",
+                    "kind": "InferenceService"
+                  },
+                  {
+                    "group": "serving.kserve.io",
+                    "kind": "ServingRuntime"
+                  },
+                  {
+                    "group": "serving.kserve.io",
+                    "kind": "ClusterServingRuntime"
+                  },
+                  {
+                    "group": "serving.kserve.io",
+                    "kind": "InferenceGraph"
+                  },
+                  {
+                    "group": "serving.kserve.io",
+                    "kind": "TrainedModel"
+                  },
+                  {
+                    "group": "serving.knative.dev",
+                    "kind": "Service"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Service"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 5,
+          "columns": 20
+        },
+        "backend": null
+      }
+    ],
+    "sextant.kuberay": [
+      {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "kuberay-v1.0.0",
+        "asset": "sextant.kuberay-1.0.0.sextant-ext",
+        "size": 73963,
+        "sha256": "8c13076cbc949ed67c70417ce1003c0815e95a58e100e994b2af193157dc02bd",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:08:23Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "ray.io",
+                    "kind": "RayCluster"
+                  },
+                  {
+                    "group": "ray.io",
+                    "kind": "RayJob"
+                  },
+                  {
+                    "group": "ray.io",
+                    "kind": "RayService"
+                  },
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            },
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "",
+                    "kind": "Pod"
+                  }
+                ]
+              },
+              "actions": [
+                "logs"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 3,
+          "columns": 13
         },
         "backend": null
       }
@@ -3501,6 +3869,71 @@
         "backend": null
       }
     ],
+    "sextant.strimzi": [
+      {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "strimzi-v1.0.0",
+        "asset": "sextant.strimzi-1.0.0.sextant-ext",
+        "size": 36701,
+        "sha256": "ffe1aa24a46fad82a5e7d86c0da8a5549ea6efa4fc85f997835326e0e912e7f3",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:10:11Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "Kafka"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaNodePool"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaTopic"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaUser"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaConnect"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaMirrorMaker2"
+                  },
+                  {
+                    "group": "kafka.strimzi.io",
+                    "kind": "KafkaConnector"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 1,
+          "columns": 29
+        },
+        "backend": null
+      }
+    ],
     "sextant.traefik": [
       {
         "version": "1.0.0",
@@ -3618,6 +4051,79 @@
         "contributes": {
           "detailsSections": 2,
           "columns": 45
+        },
+        "backend": null
+      }
+    ],
+    "sextant.vpa": [
+      {
+        "version": "1.0.0",
+        "sextantApi": 4,
+        "tag": "vpa-v1.0.0",
+        "asset": "sextant.vpa-1.0.0.sextant-ext",
+        "size": 60235,
+        "sha256": "efb8ea69ba099bb6699b7d7257a67bfe227778a5099f0abe09e9d4f8070b92ad",
+        "keyId": "29A9710652478019",
+        "publishedAt": "2026-11-11T10:10:58Z",
+        "permissions": {
+          "clusters": {
+            "type": "all"
+          },
+          "rules": [
+            {
+              "namespaces": {
+                "type": "all"
+              },
+              "kinds": {
+                "type": "only",
+                "kinds": [
+                  {
+                    "group": "autoscaling.k8s.io",
+                    "kind": "VerticalPodAutoscaler"
+                  },
+                  {
+                    "group": "autoscaling.k8s.io",
+                    "kind": "VerticalPodAutoscalerCheckpoint"
+                  },
+                  {
+                    "group": "autoscaling",
+                    "kind": "HorizontalPodAutoscaler"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "Deployment"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "StatefulSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "DaemonSet"
+                  },
+                  {
+                    "group": "apps",
+                    "kind": "ReplicaSet"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "Job"
+                  },
+                  {
+                    "group": "batch",
+                    "kind": "CronJob"
+                  }
+                ]
+              },
+              "actions": [
+                "read"
+              ]
+            }
+          ]
+        },
+        "contributes": {
+          "detailsSections": 2,
+          "columns": 9
         },
         "backend": null
       }
