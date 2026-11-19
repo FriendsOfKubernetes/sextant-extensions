@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T23:57:10.579Z",
+  "generatedAt": "2026-11-19T01:37:23.183Z",
   "extensions": [
     {
       "id": "sextant.argo-cd",
@@ -152,14 +152,14 @@
       "repository": "FriendsOfKubernetes/sextant-extensions",
       "publisherKey": "RWQZgEdSBnGpKZuglLOD+ktnSO64Fmp0EMfjuX451gWMpQglNZRh7aN0",
       "latest": {
-        "version": "1.5.0",
+        "version": "1.5.1",
         "sextantApi": 4,
-        "tag": "argo-rollouts-v1.5.0",
-        "asset": "sextant.argo-rollouts-1.5.0.sextant-ext",
-        "size": 4129370,
-        "sha256": "25730dcbd67cc71bc8bac07e4509c34ddc751de93603edda7a9481a5a9d98a56",
+        "tag": "argo-rollouts-v1.5.1",
+        "asset": "sextant.argo-rollouts-1.5.1.sextant-ext",
+        "size": 4129687,
+        "sha256": "8ca24e65ccf47b6d8f419427d875b80ef7e155e4ae842c66cbcb07ed65023712",
         "keyId": "29A9710652478019",
-        "publishedAt": "2026-11-12T15:17:38Z",
+        "publishedAt": "2026-11-19T01:36:23Z",
         "permissions": {
           "clusters": {
             "type": "all"
